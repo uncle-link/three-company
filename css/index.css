@@ -1,0 +1,270 @@
+/*common*/
+.back-green-yellow {
+    background: greenyellow;
+}
+.back-green {
+    background: green;
+}
+.back-mid-green {
+    background: #00a29a;
+}
+.back-mid-blue {
+    background: #036eb8;
+}
+.back-blue {
+    background: blue;
+}
+/*global*/
+.index-page .btn{
+    font-size: 10px;
+    padding: 5px 25px;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 991px) {
+    .common-problem {
+        text-align: center;
+    }
+}
+@media (max-width: 960px) and (min-width: 765px) {
+   .content .text-center .module {
+       height: 190px;
+   }
+}
+
+
+/*private*/
+.subtitle {
+    padding: 15px 0;
+}
+.brand-title, .content-title, .registry-risk-title, .common-problem-title, .function-title {
+    margin-top: 65px;
+}
+
+.brand .col-sm-1{
+    /*width: 0 !important;*/
+}
+.middle-hr {
+    height: 3px;
+    background: black;
+    width: 28px;
+    margin: 6px auto;
+}
+
+.brand .modules, .content .modules:first-child {
+    margin-top: 25px;
+}
+.brand .module{
+    height: 151px;
+    background: red;
+    color: white;
+    padding: 46px 30px 0;
+}
+.content .module  {
+    height: 151px;
+    background: greenyellow;
+    color: white;
+    padding: 23px 23px 0 23px;
+}
+.content .module small {
+    font-size: 10px;
+}
+.content .text-left .module:nth-of-type(1) {
+    background: #00a29a;
+}
+.content .text-left .module:nth-of-type(2) {
+    background: #2ea7e0;
+}
+.content .text-left .module:nth-of-type(3) {
+    background: #172a88;
+}
+
+.content .text-center .module:nth-of-type(1),.brand .module:nth-of-type(1) {
+    background: #8fc31f;
+}
+.content .text-center .module:nth-of-type(2),.brand .module:nth-of-type(2) {
+    background: #00913a;
+}
+.content .text-center .module:nth-of-type(3),.brand .module:nth-of-type(3) {
+    background: #00a29a;
+}
+.content .text-center .module:nth-of-type(4),.brand .module:nth-of-type(4)  {
+    background: #036eb8;
+}
+.content .text-center .module:nth-of-type(5),.brand .module:nth-of-type(5)  {
+    background: #171c61;
+}
+
+
+  .meal-first-hr {
+    width: 25px;
+    height: 2px;
+    background: aqua;
+}
+.meal-second-hr {
+    background: #eee;
+}
+
+.meal-title {
+    font-size: 16px;
+}
+.meal-second-hr:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background: aqua;
+    height: 2px;
+    width: 176px;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+
+.tab-content {
+    background: #eee;
+    padding: 0 60px 30px;
+}
+.tab-list-title {
+    margin-top: 20px;
+}
+.tab-content .btn-active {
+    color: #2ea7e0;
+    border-color: #2ea7e0;
+}
+.tab-content .left {
+    border-right: 3px solid white;
+}
+.meal-button-group a:hover {
+    text-decoration: none;
+}
+.meal-button-group .btn-active {
+    color: #2ea7e0;
+    border-color: #2ea7e0;
+}
+
+.meal-download {
+    margin: 15px 0 50px 0;
+}
+
+.shop-registry-modules img {
+    width: 50px;
+}
+
+.shop-registry {
+    background: url("../assets/imgs/goods-registry.jpg") no-repeat  center/100% 100%;
+    padding: 45px 0 60px 0;
+}
+.shop-registry hr {
+    width: 34px;
+    background: white;
+    height: 2px;
+
+}
+.shop-registry-modules .shop-registry-module {
+    background: white ;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+    max-height: 250px;
+    cursor: pointer;
+}
+.shop-registry-modules .shop-registry-module:hover {
+color: #ea5537;
+}
+.shop-registry-hint {
+    margin-top: 15px;
+    font-size: 10px;
+}
+.shop-registry-title, .shop-registry-hint {
+    color: white;
+}
+
+.registry-risk-module-title {
+
+    margin-bottom: 15px;
+
+}
+.registry-risk-modules .col-md-4 {
+    padding: 26px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    height: 200px;
+    -moz-transition:  .3s;
+    -ms-transition: .3s;
+    transition: .3s;
+}
+.registry-risk-modules .col-md-4:hover {
+    background: #2ea7e0;
+    color: white;
+}
+
+.common-problem-modules {
+    margin-top: 60px;
+}
+
+.common-problem-modules .first-list {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.common-problem-modules .first-list ol{
+    margin-top: 20px;
+    font-size: 9px;
+    padding-left: 10px;
+}
+.common-problem-modules .first-list li {
+    margin-top: 3px;
+}
+.common-problem-modules a:hover {
+    text-decoration: none;
+}
+.common-problem-modules .right-gt {
+    float: right;
+}
+.common-problem-modules .list-group-item {
+    font-size: 11px;
+    border-left: none;
+    border-right: none;
+}
+
+.function-modules {
+    margin-top: 34px;
+}
+.function-modules .col-md-2{
+    background: red;
+    padding: 20px;
+    color: white;
+    -moz-transition:  .3s;
+    -ms-transition: .3s;
+    transition: .3s;
+}
+.function-modules .col-md-2:hover {
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    z-index: 1;
+}
+.function-modules img {
+    height: 30px;
+}
+
+.function {
+    padding-bottom: 20px;
+}
+.function-modules small {
+    font-size: 10px;
+}
+.function-modules .col-md-2:nth-of-type(2) {
+    background: #f5b229;
+}
+
+.function-modules .col-md-2:nth-of-type(3) {
+    background: #eb5c2e;
+}
+
+.function-modules .col-md-2:nth-of-type(4) {
+    background: #1ba65b;
+}
+.function-modules .col-md-2:nth-of-type(5) {
+    background: #1d70b9;
+}
+.function-modules .col-md-2:nth-of-type(6) {
+    background: #542b8c;
+}
