@@ -5,15 +5,26 @@ $ssFontSize: 10px;
 $mainColor: #2ea7e0;
 
 /*mixin*/
+@mixin paddingSmall($value: 2px) {
+  padding-right: $value;
+  padding-left: $value;
+}
 
-
-.tab-button-group {
-  a {
-    color: black;
+/*global*/
+a {
+  color: black;
+  &:hover {
+    text-decoration: none;
   }
-  a.active {
+  &.active {
     color: $mainColor;
   }
+  &.active .btn {
+    color: $mainColor;
+  }
+}
+
+.tab-button-group {
 
   padding: 20px;
   span {
@@ -26,8 +37,15 @@ $mainColor: #2ea7e0;
 
   button {
     font-size: $ssFontSize;
-    background: #efefef;
-    color: $mainColor;
+    width: 100%;
+    padding: 0;
+    height: 30px;
+    & a {
+      font-size: $ssFontSize;
+      display: block;
+      padding: 6px 0;
+    }
+
   }
 
   .module {
@@ -63,19 +81,48 @@ $mainColor: #2ea7e0;
     }
     .btn {
       width: 100%;
-      height: 30px;
       margin-bottom: 5px;
-      background: white;
-      color: black;
+
     }
     .col-sm-6 {
-      padding-right: 2px;
-      padding-left: 2px;
+      @include paddingSmall();
     }
   }
 
   .third-col {
-     
+    font-size: $ssFontSize;
+  }
+  .third-col-hr {
+    margin: 5px 0 10px 0;
+    background: $mainColor;
+    height: 1px;
+  }
+  .third-col-title {
+    color: $mainColor;
+  }
+  .third-col-body {
+    &  span {
+      display: inline-block;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      &:hover{
+        color: $mainColor;
+      }
+    }
+  }
+  .third-col-footer {
+    .col-md-5 {
+      @include paddingSmall();
+    }
+    button {
+      &:hover {
+        background: $mainColor;
+      }
+      &:hover  a {
+        color: white;
+      }
+
+    }
   }
 
 }
