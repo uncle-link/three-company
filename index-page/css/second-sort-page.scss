@@ -1,0 +1,81 @@
+/*font-size*/
+$ssFontSize: 10px;
+
+/*color*/
+$mainColor: #2ea7e0;
+
+/*mixin*/
+
+
+.tab-button-group {
+  a {
+    color: black;
+  }
+  a.active {
+    color: $mainColor;
+  }
+
+  padding: 20px;
+  span {
+    cursor: pointer;
+  }
+}
+
+.tab-content {
+
+
+  button {
+    font-size: $ssFontSize;
+    background: #efefef;
+    color: $mainColor;
+  }
+
+  .module {
+    padding: 35px 0;
+    border-top: 1px solid #dddddd;
+
+    &:last-child {
+      border-bottom: 1px solid #dddddd;
+    }
+    h5 {
+      background: $mainColor;
+      padding: 42px 0;
+      color: white;
+    }
+
+  }
+
+  .first-col {
+    .download-btn {
+      padding: 10px 0;
+    }
+  }
+
+  .second-col {
+
+    margin-bottom: 10px;
+
+    strong {
+      font-size: 12px;
+    }
+    small {
+      font-size: 10px;
+    }
+    .btn {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 5px;
+      background: white;
+      color: black;
+    }
+    .col-sm-6 {
+      padding-right: 2px;
+      padding-left: 2px;
+    }
+  }
+
+  .third-col {
+     
+  }
+
+}

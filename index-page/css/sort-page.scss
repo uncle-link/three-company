@@ -1,0 +1,72 @@
+/*font-size*/
+$ssFontSize: 10px;
+
+/*color*/
+$mainColor: #2ea7e0;
+
+/*mixin*/
+
+.tab-button-group {
+  a {
+    color: black;
+  }
+  a.active {
+    color: $mainColor;
+  }
+
+  padding: 20px;
+  span {
+    cursor: pointer;
+  }
+}
+.tab-content {
+
+  h5 {
+    font-weight: 300;
+    padding: 15px 25px 0 50px;
+
+  }
+  p {
+    font-size: $ssFontSize;
+    padding: 0 25px 0 50px;
+
+  }
+  button {
+    font-size: $ssFontSize;
+    background: #efefef;
+    color: $mainColor;
+  }
+
+  .right-line-box {
+    padding-left: 50px;
+    overflow: hidden;
+  }
+  .right-line {
+    height: 1px ;
+    background: $mainColor;
+    margin: 10px 0;
+  }
+
+  .col-md-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .module {
+    border: 1px solid #b5b5b6;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background: $mainColor;
+      color: white;
+      .right-line {
+        background: white;
+      }
+    }
+  }
+
+  .download-btn {
+    padding: 0 0 20px 50px;
+
+  }
+}
