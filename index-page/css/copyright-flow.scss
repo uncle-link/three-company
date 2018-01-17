@@ -3,16 +3,17 @@
  .content-title, .common-problem-title, .function-title {
   margin-top: 65px;
 }
-@media (max-width: 1346px) and (min-width: 904px) {
+@media (max-width: 1346px) and (min-width: 940px) {
   .shop-registry-module {
-    height: 162px;
+    height: 200px;
   }
 }
-@media (max-width: 903px) and (min-width: 768px) {
+@media (max-width: 939px) and (min-width: 768px) {
   .shop-registry-module {
-    height: 196px;
+    height: 210px !important;
   }
 }
+
 .middle-hr {
   height: 3px;
   background: black;
@@ -20,74 +21,125 @@
   margin: 6px auto;
 }
 
+/*mixin*/
+@mixin paddingSmall($value: 2px) {
+  padding-right: $value;
+  padding-left: $value;
+}
 
 /*subtitle*/
 .subtitle {
   padding: 15px 0;
 }
-.brand-title, .content-title, .registry-risk-title, .common-problem-title, .function-title {
+.content-title, .registry-risk-title, .common-problem-title, .function-title {
   margin-top: 65px;
 }
 
+/*brand*/
+.brand .modules, .content .modules:first-child {
+  margin-top: 25px;
+}
+.brand {
+  margin-top: 65px;
+  padding-top: 35px;
+  background: #13ae67;
+  .modules {
+    position: relative;
+    top: 74px;
+  }
+  .col-sm-3 {
+    @include paddingSmall(4px);
+  }
+  .module {
+    background: white;
+    height: 151px;
+    padding: 20px 30px 0;
+    margin-bottom: 10px;
+    img {
+      height: 38px;
+    }
+    small {
+      font-size: 10px;
+    }
+  }
+
+}
+
 /*content*/
-.content .module  {
+.content {
+  margin-top: 160px;
+}
+.content .modules {
+  margin-top: 30px;
+  margin-bottom: 75px;
+}
+
+.content .module small {
+  font-size: 12px;
+}
+
+.content .module {
   height: 151px;
   background: greenyellow;
   color: white;
   padding: 23px 23px 0 23px;
-}
-.content .module small {
-  font-size: 10px;
-}
 
-.module {
   div {
     margin: 5px 0 30px;
   }
   img {
-    height: 30px;
+    height: 43px;
+  }
+  transition: .3s;
+  &:hover {
+    transform: scale(1.2);
+    z-index: 1;
   }
 }
 
-.content .text-left .module:first-child {
+.first-row .module:first-child {
+  background: #172a88;
+
+}
+.first-row .module:first-child + .module {
   background: #00a29a;
 }
-.content .text-left .module:first-child + .module {
+.first-row .module:first-child + .module + .module {
+  background: #00913a;
+}
+
+
+.second-row .module:first-child {
+  background: #00a29a;
+}
+.second-row .module:first-child + .module {
   background: #2ea7e0;
 }
-.content .text-left .module:first-child + .module + .module {
+.second-row .module:first-child + .module + .module {
   background: #172a88;
 }
 
-.content .text-center .module:first-child,.brand .module:first-child {
+.third-row .module:first-child {
   background: #8fc31f;
 }
-.content .text-center .module:first-child + .module, .brand .module:first-child + .module {
+.third-row .module:first-child + .module {
   background: #00913a;
 }
-.content .text-center .module:first-child + .module + .module,.brand .module:first-child + .module + .module{
+.third-row .module:first-child + .module + .module {
   background: #00a29a;
+
 }
-.content .text-center .module:first-child + .module + .module + .module,.brand .module:first-child + .module + .module + .module  {
+.third-row .module:first-child + .module + .module + .module{
   background: #036eb8;
 }
-.content .text-center .module:first-child + .module + .module + .module + .module,.brand .module:first-child + .module + .module + .module + .module {
-  background: #171c61;
-}
-
-
 
 /*shop-regisry*/
-.shop-registry-modules img {
-  width: 50px;
-}
 
+/*compatibility*/
 .shop-registry {
   background: url("../assets/imgs/goods-registry.jpg") no-repeat  ;
   background-size:
           cover;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/imgs/goods-registry.jpg',sizingMethod='scale');
-
-
   background-size: 100% 100%;
   padding: 45px 0 60px 0;
 }
@@ -97,22 +149,33 @@
   height: 2px;
 
 }
-.shop-registry-modules .shop-registry-module {
-  background: white ;
-  padding: 15px 30px;
-  margin-bottom: 10px;
-  max-height: 250px;
-  cursor: pointer;
-}
-.shop-registry-modules .shop-registry-module:hover {
-  color: #ea5537;
-}
-.shop-registry-hint {
-  margin-top: 15px;
-  font-size: 10px;
-}
-.shop-registry-title, .shop-registry-hint {
+.shop-registry-title {
   color: white;
+}
+.shop-registry-modules {
+  img {
+    height: 50px;
+  }
+  .col-sm-2 {
+    @include paddingSmall(4px);
+  }
+  .shop-registry-module {
+    background: white ;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+    height: 185px;
+    cursor: pointer;
+    h5 {
+      font-size: 13px;
+    }
+    small {
+      font-size: 11px;
+    }
+    &:hover {
+      color: #ea5537;
+
+    }
+  }
 }
 
 /*meal*/

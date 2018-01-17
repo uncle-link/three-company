@@ -6,9 +6,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
     <title>Title</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/copyright-flow.css">
 </head>
 <body>
+
+
+<!--common header-->
+<div class="mobilemenu slideUpRetourn magictime">
+    <div class="box maxbox">
+        <div class="menuset">
+            <div class="settitle">品牌策略设计板块</div>
+            <ul class="clearfix">
+                <li class="big"><a href="<%=request.getContextPath()%>/design/index.html">品牌策略设计</a><div class="border"></div></li>
+                <li><a href="<%=request.getContextPath()%>/design/brand.html">品牌研究</a><div class="border"></div></li>
+                <li><a href="<%=request.getContextPath()%>/design/case.html">案例代表</a><div class="border"></div></li>
+                <li><a href="<%=request.getContextPath()%>/design/suggest.html">行业推荐</a><div class="border"></div></li>
+                <li class="disable"><a href="javascript:void(0);">开发中</a></li>
+                <li class="disable"><a href="javascript:void(0);">开发中</a></li>
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div class="menuset">
+            <div class="settitle">专业领域</div>
+            <ul class="clearfix">
+                <li><a href="<%=request.getContextPath()%>/design/index.html">品牌策略设计</a></li>
+                <li><a href="<%=request.getContextPath()%>/movies/index.html">影视制作</a></li>
+                <li><a href="<%=request.getContextPath()%>/package/index.html">包装画册</a></li>
+                <li><a href="<%=request.getContextPath()%>/site/index.html">网站电商</a></li>
+                <li><a href="<%=request.getContextPath()%>/space/index.html">空间导视</a></li>
+                <li><a href="<%=request.getContextPath()%>/tm/index.html">商标版权</a></li>
+            </ul>
+        </div>
+        <div class="line"></div>
+        <div class="menuset">
+            <div class="settitle">三人形思整体介绍</div>
+            <ul class="clearfix">
+                <li><a href="<%=request.getContextPath()%>/index.html">首页</a></li>
+                <li><a href="<%=request.getContextPath()%>/us.html">我们</a></li>
+                <li><a href="<%=request.getContextPath()%>/works.html">精彩作品</a></li>
+                <li><a href="<%=request.getContextPath()%>/service.html">服务</a></li>
+                <li><a href="<%=request.getContextPath()%>/contact.html">联系</a></li>
+                <li><a href="<%=request.getContextPath()%>/news.html">新闻</a></li>
+                <li><a href="<%=request.getContextPath()%>/customer.html">客户</a></li>
+                <li class="disable"><a href="javascript:void(0);">开发中</a></li>
+                <li class="disable"><a href="javascript:void(0);">开发中</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="header">
+    <div class="maxbox">
+        <div class="logo"><img src="assets/imgs/header/logo.png"></div>
+        <div class="menubtn close"></div>
+        <div class="right bcontact">
+            <ul class="menu s">
+                <li class="first"><a href="<%=request.getContextPath()%>/index.html">首页</a><div class="border"></div></li>
+                <li class="big"><a href="<%=request.getContextPath()%>/design/index.html">品牌策略设计</a><div class="border"></div></li>
+                <li class=""><a href="<%=request.getContextPath()%>/movies/index.html">影视制作</a><div class="border"></div></li>
+                <li class=""><a href="<%=request.getContextPath()%>/package/index.html">包装画册</a><div class="border"></div></li>
+                <li class=""><a href="<%=request.getContextPath()%>/site/index.html">网站电商</a><div class="border"></div></li>
+                <li class=""><a href="<%=request.getContextPath()%>/space/index.html">空间导视</a><div class="border"></div></li>
+                <li class=""><a href="<%=request.getContextPath()%>/tm/index.html">商标版权</a><div class="border"></div></li>
+                <li><a href="javascript:showmoremenudialog();">介绍</a><div class="border"></div></li>
+                <div class="clearfix"></div>
+            </ul>
+            <div class="contact hasoprbtn">
+                <div class="box">
+                    <img src="assets/imgs/header/phone.png">
+                    <p>+86-022</p>
+                    <p class="big">5868 5516</p>
+                    <ul class="clearfix oprbtnlist">
+                        <li class="oprbtn othermenu" onclick="showmoremenudialog();"><img width="14" height="14" class="inject-svg" src="assets/imgs/header/dotdotdot.svg" /></li>
+                        <li class="oprbtn search" onclick="showsearchdialog();"><img width="14" height="14" class="inject-svg" src="assets/imgs/header/search.svg" /></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 通用头部代码 begin-->
+<div class="overback"></div><div class="overback"></div>
+<div class="dialogofcode dialog spaceInUp magictime">
+    <div class="closebtn hasborder" onclick="hidecodeidalog();"><img src="assets/imgs/header/close-x.svg"></div>
+    <div class="codebox">
+        <div class="codeset">
+
+            <div class="codeitem active">
+                <p>扫一扫查看信息</p>
+                <img src="assets/imgs/header/zjinfo.jpg">
+                <p class="big">总监信息</p>
+            </div>
+            <div class="codeitem">
+                <p>扫一扫添加微信</p>
+                <img src="assets/imgs/header/zjcode.jpg">
+                <p class="big">总监微信</p>
+            </div>
+            <div class="codeitem">
+                <p>扫一扫关注我们</p>
+                <img src="assets/imgs/header/wxcode.jpg">
+                <p class="big">官方微信</p>
+            </div>
+        </div>
+        <div class="codeopr">
+            <div class="item prev"><img src="assets/imgs/header/prev.png"></div>
+            <div class="item next"><img src="assets/imgs/header/next.png"></div>
+        </div>
+    </div>
+
+</div>
+<div class="dialog dialogofsearch spaceInDown magictime">
+    <form action="<%=request.getContextPath()%>/web/sense/case/search">
+        <div class="closebtn hasborder" onclick="hidesearchdialog();"><img src="assets/imgs/header/lose-x.svg"></div>
+        <input class="dialogofsearch-input" name="keywords"/>
+        <div class="btn enter">搜索</div>
+    </form>
+</div>
+<div class="dialog dialogofmoremenu spaceInDown magictime">
+    <div class="closebtn hasborder" onclick="hidemoremenudialog();"><img src="assets/imgs/header/close-x.svg"></div>
+    <ul>
+        <a href="<%=request.getContextPath()%>/us.html"><li>我们</li></a>
+        <a href="<%=request.getContextPath()%>/works.html"><li>精彩作品</li></a>
+        <a href="<%=request.getContextPath()%>/service.html"><li>服务</li></a>
+        <a href="<%=request.getContextPath()%>/contact.html"><li>联系</li></a>
+        <a href="<%=request.getContextPath()%>/news.html"><li>新闻</li></a>
+        <a href="<%=request.getContextPath()%>/customer.html"><li>客户</li></a>
+    </ul>
+</div>
+<!-- 通用头部代码 end-->
+
+
+
+
+
+
 <!--top picture-->
 <div class="row">
     <a href="#">
@@ -18,8 +150,49 @@
 
 <!--subtitle-->
 <div class="subtitle text-center">
-    <small>防止恶意侵权，保护创业成果，建立商业利益的有力保障是持续发展的钢需</small><br/>
-    <small>Advantages: Integrated Creative Management; 24/7 Service & Assist; Full Refund If You're Not Satisfied</small>
+    <small>没有版权保护的作品一旦面对剽窃、抄袭、侵权的行为，就面临证据不足、举证困难、难以维权问题</small><br/>
+    <small>No copyright protection works once faced with plagiarism, plagiarism, tortious acts,
+        faced with insufficient evidence, difficult evidence, difficult to rights</small>
+</div>
+
+<div class="brand text-center">
+    <div class="brand-title ">
+        为什么要及时版权登记
+    </div>
+    <hr class="middle-hr"/>
+    <small>综合全方位保护</small>
+    <div class="row modules">
+        <div class="col-sm-offset-1 col-sm-10">
+            <div class="col-sm-3">
+                <div class="module">
+                    <img  src="assets/imgs/copyright-flow/source-icon-07.png" alt="">
+                    <h4>宣  传</h4>
+                    <small>通过登记机构的定期公告，可以向社会宣传自己的产品。有利于作品、软件的许可、转让、有利于作品、软件的传播和经济价值的实现。 </small>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="module">
+                    <img  src="assets/imgs/copyright-flow/umbrella-icon-08.png" alt="">
+                    <h4>保  护</h4>
+                    <small>在发生著作权争议时，《作品登记证书》是主张权利的有力武器，同时是向人民法院提起诉讼，请求司法保护的前提。 </small>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="module">
+                    <img  src="assets/imgs/copyright-flow/badge-icon.png" alt="">
+                    <h4>荣  誉</h4>
+                    <small>《作品登记证书》是您水平的客观反映，国家权威部门对您能力的认可将使您在求职应聘时更加自信。</small>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="module">
+                    <img  src="assets/imgs/copyright-flow/gift-icon.png" alt="">
+                    <h4>福  利</h4>
+                    <small>企业申请是办理双软认定、高新技术企业认定得前提，可以享受国家税收优惠政策。</small>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="content text-center">
@@ -27,9 +200,9 @@
         哪些作品可以申请版权
     </div>
     <hr class="middle-hr"/>
-    <div class="row first-row modules text-left">
+    <div class="row  modules text-left">
         <div class="col-sm-offset-1 col-sm-10">
-            <div class="row text-center">
+            <div class="row first-row text-center">
                 <div class="col-sm-4 module">
                     <div>
                         <img src="./assets/imgs/copyright-flow/brand-icon.png" alt="">
@@ -49,64 +222,107 @@
                     <small>口号</small>
                 </div>
             </div>
+
+            <div class="row second-row text-center">
+                <div class="col-sm-4 module">
+                    <div>
+                        <img src="./assets/imgs/copyright-flow/pack-icon.png" alt="">
+                    </div>
+                    <small>产品包装</small>
+                </div>
+                <div class="col-sm-4 module">
+                    <div>
+                        <img src="./assets/imgs/copyright-flow/mascot-icon.png" alt="">
+                    </div>
+                    <small>吉祥物</small>
+                </div>
+                <div class="col-sm-4 module">
+                    <div>
+                        <img src="./assets/imgs/copyright-flow/brand-style-icon.png" alt="">
+                    </div>
+                    <small>品牌风格图形</small>
+                </div>
+            </div>
+            <div class="row third-row text-center">
+                <div class="col-sm-3 module">
+                    <div>
+                        <img src="./assets/imgs/copyright-flow/store-front-icon.png" alt="">
+                    </div>
+                    <small>门头</small>
+                </div>
+                <div class="col-sm-3 module">
+                    <div>
+                        <img src="./assets/imgs/copyright-flow/store-front-space-icon.png" alt="">
+                    </div>
+                    <small>店面空间</small>
+                </div>
+                <div class="col-sm-3 module">
+                    <div>
+                        <img src="./assets/imgs/copyright-flow/video-icon.png" alt="">
+                    </div>
+                    <small>摄影作品</small>
+                </div>
+                <div class="col-sm-3 module">
+                    <div>
+                        <img src="./assets/imgs/copyright-flow/product-design.png" alt="">
+                    </div>
+                    <small>产品设计图</small>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row second-row modules text-left">
-    </div>
-    <div class="row third-row modules text-left">
     </div>
 </div>
 
 <div class="shop-registry text-center">
     <div class="shop-registry-title">
-        商品注册流程
+        版权登记流程
     </div>
     <hr>
     <div class="row shop-registry-modules">
-        <div class="col-sm-offset-1 col-sm-10">
-            <div class="row">
-                <div class="col-sm-3 text-center">
-                    <div class="shop-registry-module">
-                        <img  src="assets/imgs/brand-search-10.jpg" alt="">
-                        <h5><strong>商标查询</strong></h5>
-                        <small>注册类别判断及风险评估1个工作日</small>
-                    </div>
-                </div>
-                <div class="col-sm-3 text-center">
-                    <div class="shop-registry-module">
-                        <img  src="assets/imgs/submit-registry.jpg" alt="">
-                        <h5><strong>提交注册</strong></h5>
-                        <small>制作相关材料准备提交
-                            1-2个工作日</small>
-                    </div>
-                </div>
-                <div class="col-sm-3 text-center">
-                    <div class="shop-registry-module">
-                        <img  src="assets/imgs/receive.jpg" alt="">
-                        <h5><strong>受理通知书</strong></h5>
-                        <small>商标局形式审查阶段
-                            3个月左右</small>
-                    </div>
-                </div>
-                <div class="col-sm-3 text-center">
-                    <div class="shop-registry-module">
-                        <img  src="assets/imgs/complete-registry.jpg" alt="">
-                        <h5><strong>商标查询</strong></h5>
-                        <small>商标注册全部完成
-                            12个月左右</small>
-                    </div>
-                </div>
+        <div class="col-sm-2 col-sm-offset-1 text-center">
+            <div class="shop-registry-module">
+                <img  src="assets/imgs/copyright-flow/atom-icon.png" alt="">
+                <h5><strong>免费判定版权类型</strong></h5>
+                <small>判定登记版权是否具备版权
+                    登记条件及登记类型</small>
             </div>
         </div>
-    </div>
-    <div class="shop-registry-hint">
-        温馨提示：商标申请有风险，不是所有的商标都能通过申请；我们会在提交之前仔细查询，并给您提供建议，尽最大努力将风险降到最低。
+        <div class="col-sm-2 text-center">
+            <div class="shop-registry-module">
+                <img  src="assets/imgs/copyright-flow/lock-icon.png" alt="">
+                <h5><strong>签订保密协议</strong></h5>
+                <small>本公司与您签订保密协议</small>
+            </div>
+        </div>
+        <div class="col-sm-2 text-center">
+            <div class="shop-registry-module">
+                <img  src="assets/imgs/copyright-flow/target-icon.png" alt="">
+                <h5><strong>撰写作品说明书</strong></h5>
+                <small>签订代理委托协议，开始撰写作品
+                    说明书（自己撰写亦可)</small>
+            </div>
+        </div>
+        <div class="col-sm-2 text-center">
+            <div class="shop-registry-module">
+                <img  src="assets/imgs/copyright-flow/air-icon.png" alt="">
+                <h5><strong>提交版权登记文件</strong></h5>
+                <small>向版权局提交版权登记文件获取
+                    版权受理通知书</small>
+            </div>
+        </div>
+        <div class="col-sm-2 text-center">
+            <div class="shop-registry-module">
+                <img  src="assets/imgs/copyright-flow/shield-icon.png" alt="">
+                <h5><strong>领取登记证书</strong></h5>
+                <small>收到版权登记证书</small>
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="function text-center">
     <div class="function-title text-center">
-        <span>做品牌, 近注册商标远远不够</span>
+        <span>做品牌，仅版权登记远远不够</span>
     </div>
     <hr class="middle-hr">
 
@@ -154,6 +370,7 @@
 <![endif]-->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/header/common.js"></script>
 <script>
 
 </script>
