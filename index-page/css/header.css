@@ -27,9 +27,9 @@
 .header .right .menu.s li.big{width:160px;}
 .header .right .menu li a{display: block;color:#595857;font-size: 16px;}
 .header .right .menu li.active a,.header .right .menu li:hover a{color:red;}
-/*.header .right .menu li.btn{width: 60px;border:0;cursor: pointer;text-align: right;}
-.header .right .menu li.btn,.header .right .menu li.btn *{-webkit-transition:all 0s linear;-moz-transition:all 0s linear;-o-transition:all 0s linear;-ms-transition:all 0s linear;}
-.header .right .menu li.btn svg:hover,.header .right .menu li.btn svg:hover *{fill:red;fill:red!important;color: red;}*/
+/*.header-footer .right .menu li.btn{width: 60px;border:0;cursor: pointer;text-align: right;}
+.header-footer .right .menu li.btn,.header-footer .right .menu li.btn *{-webkit-transition:all 0s linear;-moz-transition:all 0s linear;-o-transition:all 0s linear;-ms-transition:all 0s linear;}
+.header-footer .right .menu li.btn svg:hover,.header-footer .right .menu li.btn svg:hover *{fill:red;fill:red!important;color: red;}*/
 .header .right .oprbtnlist{position: absolute;top:0;right: 0;}
 .header .right .oprbtn{width: 50px;border:0;cursor: pointer;text-align: right;display: block;float: left;padding-top: 10px;}
 .header .right .oprbtn,.header .right .oprbtn *{-webkit-transition:all 0s linear;-moz-transition:all 0s linear;-o-transition:all 0s linear;-ms-transition:all 0s linear;}

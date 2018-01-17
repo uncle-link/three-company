@@ -7,163 +7,154 @@
 !function(t,e){"use strict";function r(t){t=t.split(" ");for(var e={},r=t.length,n=[];r--;)e.hasOwnProperty(t[r])||(e[t[r]]=1,n.unshift(t[r]));return n.join(" ")}var n="file:"===t.location.protocol,i=e.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#BasicStructure","1.1"),o=Array.prototype.forEach||function(t,e){if(void 0===this||null===this||"function"!=typeof t)throw new TypeError;var r,n=this.length>>>0;for(r=0;n>r;++r)r in this&&t.call(e,this[r],r,this)},a={},l=0,s=[],u=[],c={},f=function(t){return t.cloneNode(!0)},p=function(t,e){u[t]=u[t]||[],u[t].push(e)},d=function(t){for(var e=0,r=u[t].length;r>e;e++)!function(e){setTimeout(function(){u[t][e](f(a[t]))},0)}(e)},v=function(e,r){if(void 0!==a[e])a[e]instanceof SVGSVGElement?r(f(a[e])):p(e,r);else{if(!t.XMLHttpRequest)return r("Browser does not support XMLHttpRequest"),!1;a[e]={},p(e,r);var i=new XMLHttpRequest;i.onreadystatechange=function(){if(4===i.readyState){if(404===i.status||null===i.responseXML)return r("Unable to load SVG file: "+e),n&&r("Note: SVG injection ajax calls do not work locally without adjusting security setting in your browser. Or consider using a local webserver."),r(),!1;if(!(200===i.status||n&&0===i.status))return r("There was a problem injecting the SVG: "+i.status+" "+i.statusText),!1;if(i.responseXML instanceof Document)a[e]=i.responseXML.documentElement;else if(DOMParser&&DOMParser instanceof Function){var t;try{var o=new DOMParser;t=o.parseFromString(i.responseText,"text/xml")}catch(l){t=void 0}if(!t||t.getElementsByTagName("parsererror").length)return r("Unable to parse SVG file: "+e),!1;a[e]=t.documentElement}d(e)}},i.open("GET",e),i.overrideMimeType&&i.overrideMimeType("text/xml"),i.send()}},h=function(e,n,a,u){var f=e.getAttribute("data-src")||e.getAttribute("src");if(!/\.svg/i.test(f))return void u("Attempted to inject a file with a non-svg extension: "+f);if(!i){var p=e.getAttribute("data-fallback")||e.getAttribute("data-png");return void(p?(e.setAttribute("src",p),u(null)):a?(e.setAttribute("src",a+"/"+f.split("/").pop().replace(".svg",".png")),u(null)):u("This browser does not support SVG and no PNG fallback was defined."))}-1===s.indexOf(e)&&(s.push(e),e.setAttribute("src",""),v(f,function(i){if("undefined"==typeof i||"string"==typeof i)return u(i),!1;var a=e.getAttribute("id");a&&i.setAttribute("id",a);var p=e.getAttribute("title");p&&i.setAttribute("title",p);var d=[].concat(i.getAttribute("class")||[],"injected-svg",e.getAttribute("class")||[]).join(" ");i.setAttribute("class",r(d));var v=e.getAttribute("style");v&&i.setAttribute("style",v);var h=[].filter.call(e.attributes,function(t){return/^data-\w[\w\-]*$/.test(t.name)});o.call(h,function(t){t.name&&t.value&&i.setAttribute(t.name,t.value)});var g,m,b,y,A,w={clipPath:["clip-path"],"color-profile":["color-profile"],cursor:["cursor"],filter:["filter"],linearGradient:["fill","stroke"],marker:["marker","marker-start","marker-mid","marker-end"],mask:["mask"],pattern:["fill","stroke"],radialGradient:["fill","stroke"]};Object.keys(w).forEach(function(t){g=t,b=w[t],m=i.querySelectorAll("defs "+g+"[id]");for(var e=0,r=m.length;r>e;e++){y=m[e].id,A=y+"-"+l;var n;o.call(b,function(t){n=i.querySelectorAll("["+t+'*="'+y+'"]');for(var e=0,r=n.length;r>e;e++)n[e].setAttribute(t,"url(#"+A+")")}),m[e].id=A}}),i.removeAttribute("xmlns:a");for(var x,S,k=i.querySelectorAll("script"),j=[],G=0,T=k.length;T>G;G++)S=k[G].getAttribute("type"),S&&"application/ecmascript"!==S&&"application/javascript"!==S||(x=k[G].innerText||k[G].textContent,j.push(x),i.removeChild(k[G]));if(j.length>0&&("always"===n||"once"===n&&!c[f])){for(var M=0,V=j.length;V>M;M++)new Function(j[M])(t);c[f]=!0}var E=i.querySelectorAll("style");o.call(E,function(t){t.textContent+=""}),e.parentNode.replaceChild(i,e),delete s[s.indexOf(e)],e=null,l++,u(i)}))},g=function(t,e,r){e=e||{};var n=e.evalScripts||"always",i=e.pngFallback||!1,a=e.each;if(void 0!==t.length){var l=0;o.call(t,function(e){h(e,n,i,function(e){a&&"function"==typeof a&&a(e),r&&t.length===++l&&r(l)})})}else t?h(t,n,i,function(e){a&&"function"==typeof a&&a(e),r&&r(1),t=null}):r&&r(0)};"object"==typeof module&&"object"==typeof module.exports?module.exports=exports=g:"function"==typeof define&&define.amd?define(function(){return g}):"object"==typeof t&&(t.SVGInjector=g)}(window,document);
 
 $(document).ready(function(){
-    //更多服务下拉菜单
-    $(".hovertoshowmenu").click(function(){
-        $(this).find(".morelinkset").toggleClass("show");
-    });
-    /*$(".hovertoshowmenu").hover(function(){
-        $(this).find(".morelinkset").slideDown();
-    },function(){
-        $(this).find(".morelinkset").slideUp();
-    });*/
-    //svg图片处理
-    if (!(/msie [6|7|8]/i.test(navigator.userAgent))){
-        SVGInjector(document.querySelectorAll("img.inject-svg"));
-    }else{
-        $("img.inject-svg").remove();
-    }
+	//svg图片处理
+	if (!(/msie [6|7|8]/i.test(navigator.userAgent))){
+		SVGInjector(document.querySelectorAll("img.inject-svg"));	
+	}else{
+		$("img.inject-svg").remove();
+	}
+	
+	$(".header .menubtn").addClass("tip");
+	$(".header .menubtn").click(function(){
+		if($(this).hasClass("tip")){
+			$(this).removeClass("tip");
+		}
+	})
+	$(".header .menubtn").click(function(){
+		if($(this).hasClass("close")){
+			$(this).removeClass("close").addClass("open");
+			$(".mobilemenu").show();
+		}else{
+			$(this).removeClass("open").addClass("close");
+			$(".mobilemenu").fadeOut();
+		}
+		
+	});
+	$(window).scroll(function(){
+		if($(window).scrollTop()>$("header").height()+1){
+			$("body").addClass("headerfixed");
+		}else{
+			$("body").removeClass("headerfixed");
+		}
+	});
 
-    $(".header .menubtn").addClass("tip");
-    $(".header .menubtn").click(function(){
-        if($(this).hasClass("tip")){
-            $(this).removeClass("tip");
-        }
-    })
-    $(".header .menubtn").click(function(){
-        if($(this).hasClass("close")){
-            $(this).removeClass("close").addClass("open");
-            $(".mobilemenu").show();
-        }else{
-            $(this).removeClass("open").addClass("close");
-            $(".mobilemenu").fadeOut();
-        }
+	if($("body").hasClass("hidefooter")){
+	    $(".footer .footercontent").hide();
+		$(".footer .bar .icon").removeClass("shang").addClass("xia");
+	}
+   	$(".footer .bar .icon").click(function(){
+		if($(".footer .footercontent").is(":hidden")){
+			
+			$(".footer .footercontent").slideDown(0,function(){
+				$("html,body").animate({scrollTop: $(document).height()-$(".footer").height()+$(".footer .bar").outerHeight()-$(".header").height()}, 1000);
+				$(".footer .bar .icon").removeClass("xia").addClass("shang");
+			});
+			
+		}else{
 
-    });
-    $(window).scroll(function(){
-        if($(window).scrollTop()>$("header").height()+1){
-            $("body").addClass("headerfixed");
-        }else{
-            $("body").removeClass("headerfixed");
-        }
-    });
+			$(".footer .bar .icon").removeClass("shang").addClass("xia");
+			$(".footer .footercontent").slideUp(1000);
+		}
+	 });
 
-    if($("body").hasClass("hidefooter")){
-        $(".footer .footercontent").hide();
-        $(".footer .bar .icon").removeClass("shang").addClass("xia");
-    }
-    $(".footer .bar .icon").click(function(){
-        if($(".footer .footercontent").is(":hidden")){
-
-            $(".footer .footercontent").slideDown(0,function(){
-                $("html,body").animate({scrollTop: $(document).height()-$(".footer").height()+$(".footer .bar").outerHeight()-$(".header").height()}, 1000);
-                $(".footer .bar .icon").removeClass("xia").addClass("shang");
-            });
-
-        }else{
-
-            $(".footer .bar .icon").removeClass("shang").addClass("xia");
-            $(".footer .footercontent").slideUp(1000);
-        }
-    });
-
-
-
-    $(".dialogofcode .codeopr .item.prev img").click(function(){
-        var currentobj=$(".dialogofcode .codeitem.active").removeClass("active").prev();
-        if(currentobj.hasClass("codeitem")){
-            currentobj.addClass("active");
-        }else{
-            $(".dialogofcode .codeitem:last").addClass("active");
-        }
-    });
-    $(".dialogofcode .codeopr .item.next img").click(function(){
-        var currentobj=$(".dialogofcode .codeitem.active").removeClass("active").next();
-        if(currentobj.hasClass("codeitem")){
-            currentobj.addClass("active");
-        }else{
-            $(".dialogofcode .codeitem:first").addClass("active");
-        }
-    });
+    
+    
+     $(".dialogofcode .codeopr .item.prev img").click(function(){
+		  var currentobj=$(".dialogofcode .codeitem.active").removeClass("active").prev();
+		  if(currentobj.hasClass("codeitem")){
+			  currentobj.addClass("active");
+		  }else{
+			  $(".dialogofcode .codeitem:last").addClass("active");
+		  }
+	  });
+	  $(".dialogofcode .codeopr .item.next img").click(function(){
+		  var currentobj=$(".dialogofcode .codeitem.active").removeClass("active").next();
+		  if(currentobj.hasClass("codeitem")){
+			  currentobj.addClass("active");
+		  }else{
+			  $(".dialogofcode .codeitem:first").addClass("active");
+		  }
+	  });
 
     //侧边栏begin
     $(window).scroll(function() {
         if ($(window).scrollTop() > 1) $('.sb-top').fadeIn(500);
         else if ($(window).scrollTop() < 900) $('.sb-top').fadeOut(500);
         else if ($(window).scrollTop() == $(window).height()) $('.sb-top').hide()
-    });
-
-    $('.sb-top,.toplink').click(function() {
-        $('html,body').animate({
-            scrollTop: 0
-        }, 1000);
-    });
-    $('.sb-top').hover(function() {
-        $('.sider-bar .sb-top .arrow').css('background', 'gray')
-    }, function() {
-        $('.sider-bar .sb-top .arrow').css('background', '#ccc')
-    });
-    $('#app').hover(function() {
-        $(this).find('.sb-w').show()
-    }, function() {
-        $(this).find('.sb-w').hide()
-    });
+      });
+	
+	$('.sb-top,.toplink').click(function() {
+		$('html,body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
+	$('.sb-top').hover(function() {
+		$('.sider-bar .sb-top .arrow').css('background', 'gray')
+	}, function() {
+		$('.sider-bar .sb-top .arrow').css('background', '#ccc')
+	});
+	$('#app').hover(function() {
+		$(this).find('.sb-w').show()
+	}, function() {
+		$(this).find('.sb-w').hide()
+	});
     //侧边栏end
     //移动端展开与隐藏
     if($(window).width()<=650){
-        $(".txtlist .listitem:eq(0)").addClass("open");
-        $(".txtlist .listitem .l-title").click(function(){
-            $(this).next().slideToggle();
-            $(this).parent().toggleClass("open");
-        });
+    	$(".txtlist .listitem:eq(0)").addClass("open");
+    	$(".txtlist .listitem .l-title").click(function(){
+    		$(this).next().slideToggle();
+    		$(this).parent().toggleClass("open");
+    	});
     }
 });
 $(document).ready(function(){
     $(".theightbox").each(function(){
-        var currentbox=$(this);
-        currentbox.imagesLoaded(function() {
-            var maxheight=0;
-            $(currentbox).find(".theight").each(function(){
-                if($(this).height()>maxheight){
-                    maxheight=$(this).height();
-                }
-            });
-            $(currentbox).find(".theight").height(maxheight);
+      var currentbox=$(this);
+      currentbox.imagesLoaded(function() {
+        var maxheight=0;
+        $(currentbox).find(".theight").each(function(){
+          if($(this).height()>maxheight){
+            maxheight=$(this).height();
+          }
         });
+        $(currentbox).find(".theight").height(maxheight);
+      });
     });
     $(".setheightbox").each(function(){
 
-        var currentbox=$(this);
-        currentbox.imagesLoaded(function() {
-            $(currentbox).find(".setheight").height(function(){
+      var currentbox=$(this);
+      currentbox.imagesLoaded(function() {
+        $(currentbox).find(".setheight").height(function(){
 
-                return $(this).width()*parseFloat($(this).attr("bili"));
-            });
+        	return $(this).width()*parseFloat($(this).attr("bili"));
         });
+      });
     });
 
 });
 $(window).resize(function() {
-    $(".theightbox").each(function(){
-        var currentbox=$(this);
-        currentbox.imagesLoaded(function() {
-            var maxheight=0;
-            $(currentbox).find(".theight").css("height","auto");
-            $(currentbox).find(".theight").each(function(){
-                if($(this).height()>maxheight){
-                    maxheight=$(this).height();
-                }
-            });
-            $(currentbox).find(".theight").height(maxheight);
+  $(".theightbox").each(function(){
+      var currentbox=$(this);
+      currentbox.imagesLoaded(function() {
+        var maxheight=0;
+        $(currentbox).find(".theight").css("height","auto");
+        $(currentbox).find(".theight").each(function(){
+          if($(this).height()>maxheight){
+            maxheight=$(this).height();
+          }
         });
+        $(currentbox).find(".theight").height(maxheight);
+      });
     });
-    $(".setheightbox").each(function(){
-        var currentbox=$(this);
-        currentbox.imagesLoaded(function() {
-            var maxheight=0;
-            $(currentbox).find(".setheight").height(function(){
-                return $(this).width()*parseFloat($(this).attr("bili"));
-            });
+  $(".setheightbox").each(function(){
+      var currentbox=$(this);
+      currentbox.imagesLoaded(function() {
+        var maxheight=0;
+        $(currentbox).find(".setheight").height(function(){
+        	return $(this).width()*parseFloat($(this).attr("bili"));
         });
+      });
     });
 
 });
@@ -176,139 +167,139 @@ function getUrlParam(name) {
 }
 
 function gototop(){
-    $('body,html').animate({scrollTop:0},1000);
+     $('body,html').animate({scrollTop:0},1000);
 }
 
 function showcodedialog(){
-    $(".dialog").hide();
-    $(".overback").show();
-    $(".dialogofcode").fadeIn();
-
+	$(".dialog").hide();
+	$(".overback").show();
+	$(".dialogofcode").fadeIn();
+	    	
 }
 function hidecodeidalog(){
-    $(".overback").hide();
-    $(".dialogofcode").hide();
+	$(".overback").hide();
+	$(".dialogofcode").hide();
 }
 
 function hidedetailinfodialog(){
-    $(".overback").hide();
-    $(".dialogofdetailinfo").hide();
+	$(".overback").hide();
+	$(".dialogofdetailinfo").hide();
 }
 function showsearchdialog(){
-    $(".dialog").hide();
-    $(".overback").show();
-    $(".dialogofsearch").fadeIn();
-
+	$(".dialog").hide();
+	$(".overback").show();
+	$(".dialogofsearch").fadeIn();
+	    	
 }
 function hidesearchdialog(){
-    $(".overback").hide();
-    $(".dialogofsearch").hide();
+	$(".overback").hide();
+	$(".dialogofsearch").hide();
 }
 function showmoremenudialog(){
-    $(".dialog").hide();
-    $(".overback").show();
-    $(".dialogofmoremenu").fadeIn();
-
+	$(".dialog").hide();
+	$(".overback").show();
+	$(".dialogofmoremenu").fadeIn();
+	    	
 }
 function hidemoremenudialog(){
-    $(".overback").hide();
-    $(".dialogofmoremenu").hide();
+	$(".overback").hide();
+	$(".dialogofmoremenu").hide();
 }
 $(document).ready(function(){
-    $(".dialogofsearch .btn.enter").click(function(){
-        console.log($(".dialogofsearch .dialogofsearch-input").val());
-        hidesearchdialog();
-    });
+	$(".dialogofsearch .btn.enter").click(function(){
+		console.log($(".dialogofsearch .dialogofsearch-input").val());
+		hidesearchdialog();
+	});
+	
+	//公用选项卡切换
 
-    //公用选项卡切换
-
-    $(document).on("click", ".tab-box .tab-a", function () {
-        $(this).addClass("on").siblings().removeClass("on");
-        var ii = $(this).index();
-        $(this).parents(".tab-box").find(".tab-b").eq(ii).show().siblings().hide();
-        $(".auto-img img").one('load', function () {
-            mainBgResize(this, 1, 1);
-        }).each(function () {
-            if (this.complete) $(this).load();
-        });
-    })
-    //
-    $(".tab-box").each(function (i) {
-        $(this).find(".tab-a:eq(0)").click();
-    });
-
-
+	$(document).on("click", ".tab-box .tab-a", function () {
+	    $(this).addClass("on").siblings().removeClass("on");
+	    var ii = $(this).index();
+	    $(this).parents(".tab-box").find(".tab-b").eq(ii).show().siblings().hide();
+	    $(".auto-img img").one('load', function () {
+	        mainBgResize(this, 1, 1);
+	    }).each(function () {
+	        if (this.complete) $(this).load();
+	    });
+	})
+	//
+	$(".tab-box").each(function (i) {
+	    $(this).find(".tab-a:eq(0)").click();
+	});
 
 
 
-
-    //分享
-
-    $(".share .icon.pic_16").click(function () {//微博
-        var url = $(this).data("txt");
-        var url = window.location.href;
-        var title = document.title;
-        var op = "http://service.weibo.com/share/share.php?title=" + title + "&url=" + encodeURIComponent(url) + "";
-        window.open(op)
-    })
-
-    $(".share .icon.pic_17").click(function () {//QQ
-        var url = $(this).data("txt");
-        var url = window.location.href;
-        var title = document.title;
-        var op = "http://connect.qq.com/widget/shareqq/index.html?url=" + encodeURIComponent(url) + "";
-        window.open(op);
-    })
-
-    $(".share .icon.pic_18").click(function () {//Facebook
-        var url = $(this).data("txt");
-        var url = window.location.href;
-        var title = document.title;
-        var op = "https://www.facebook.com/sharer.php?s=100&p[title]=" + title + "&p[summary]=!&p[url]=" + encodeURIComponent(url) + ""
-        window.open(op)
-    })
+	
 
 
-    $(".share .icon.pic_19").click(function () {//Twitter
-        var url = $(this).data("txt");
-        var url = window.location.href;
-        var title = document.title;
-        var op = "https://www.tumblr.com/login?redirect_to=https://www.tumblr.com/widgets/share/tool?shareSource=legacy&canonicalUrl=&url=" + encodeURIComponent(url) + "&title=" + title + "";
-        window.open(op)
-    })
+	//分享
+	  
+	$(".share .icon.pic_16").click(function () {//微博
+	        var url = $(this).data("txt");
+	        var url = window.location.href;
+	        var title = document.title;
+	        var op = "http://service.weibo.com/share/share.php?title=" + title + "&url=" + encodeURIComponent(url) + "";
+	        window.open(op)
+	})
+	    
+	$(".share .icon.pic_17").click(function () {//QQ
+	    var url = $(this).data("txt");
+	    var url = window.location.href;
+	    var title = document.title;
+	    var op = "http://connect.qq.com/widget/shareqq/index.html?url=" + encodeURIComponent(url) + "";
+	    window.open(op);
+	})
+	    
+	$(".share .icon.pic_18").click(function () {//Facebook
+	    var url = $(this).data("txt");
+	    var url = window.location.href;
+	    var title = document.title;
+	    var op = "https://www.facebook.com/sharer.php?s=100&p[title]=" + title + "&p[summary]=!&p[url]=" + encodeURIComponent(url) + ""
+	    window.open(op)
+	})
+	    
 
+	$(".share .icon.pic_19").click(function () {//Twitter
+	    var url = $(this).data("txt");
+	    var url = window.location.href;
+	    var title = document.title;
+	    var op = "https://www.tumblr.com/login?redirect_to=https://www.tumblr.com/widgets/share/tool?shareSource=legacy&canonicalUrl=&url=" + encodeURIComponent(url) + "&title=" + title + "";
+	    window.open(op)
+	})
+	    
 
-    $(".share .icon.pic_20").click(function () {//Google+
-
-        var url = $(this).data("txt");
-        var url = window.location.href;
-        var title = document.title;
-        var op = "https://plus.google.com/share?url=" + encodeURIComponent(url) + "&t=" + title + "";
-        window.open(op)
-    })
-
-    $(".share .icon.pic_14,.share .icon.pic_15").click(function () {//微信
-        var url = $(this).attr("data-qrcode")
-        //alert(url)
-        var title = ""
-        title += "<div class='weixin'>"
-        title += "<i class='c'>x</i>"
-        title += "<h2>二维码</h2>"
-        title += "<div class='img'><img src='" + url + "' width='100px;' height='100px;'></div>"
-        title += "<p>扫一扫</p>"
-        title += "</div>"
-        $("body").remove(".weixin");
-        $("body").append(title)
-        //var op="http://service.weibo.com/share/share.php?url='"+ url +"'&title='"+ title +"'&searchPic=false"
-        //window.open(op)
-    })
-    $(document).on("click", ".weixin .c", function () {
-        //alert(0)
-        $(".weixin").remove();
-    })
+	$(".share .icon.pic_20").click(function () {//Google+
+	 
+	    var url = $(this).data("txt");
+	    var url = window.location.href;
+	    var title = document.title;
+	    var op = "https://plus.google.com/share?url=" + encodeURIComponent(url) + "&t=" + title + "";
+	    window.open(op)
+	})
+	    
+	$(".share .icon.pic_14,.share .icon.pic_15").click(function () {//微信
+	        var url = $(this).attr("data-qrcode")
+	        //alert(url)
+	        var title = ""
+	        title += "<div class='weixin'>"
+	        title += "<i class='c'>x</i>"
+	        title += "<h2>二维码</h2>"
+	        title += "<div class='img'><img src='" + url + "' width='100px;' height='100px;'></div>"
+	        title += "<p>扫一扫</p>"
+	        title += "</div>"
+	        $("body").remove(".weixin");
+	        $("body").append(title)
+	        //var op="http://service.weibo.com/share/share.php?url='"+ url +"'&title='"+ title +"'&searchPic=false"
+	        //window.open(op)
+	})
+	$(document).on("click", ".weixin .c", function () {
+	    //alert(0)
+	    $(".weixin").remove();
+	})
 });
 
-
+   
 
 
 
@@ -318,14 +309,14 @@ $(document).ready(function(){
 //检查JS是否兼容css属性
 function supportCss3(style) {
     var prefix = ['webkit', 'Moz', 'ms', 'o'],
-        i,
-        humpString = [],
-        htmlStyle = document.documentElement.style,
-        _toHumb = function (string) {
-            return string.replace(/-(\w)/g, function ($0, $1) {
-                return $1.toUpperCase();
-            });
-        };
+    i,
+    humpString = [],
+    htmlStyle = document.documentElement.style,
+    _toHumb = function (string) {
+        return string.replace(/-(\w)/g, function ($0, $1) {
+            return $1.toUpperCase();
+        });
+    };
 
     for (i in prefix)
         humpString.push(_toHumb(prefix[i] + '-' + style));
@@ -338,27 +329,27 @@ function supportCss3(style) {
     return false;
 }
 window._bd_share_config = {
-    common : {
-        bdText : '三人形思企划致力于品牌标志vi系统,网站建设,影视宣传片,画册折页,包装设计,环境导视,空间展示,庆典活动等品牌建立、推广、体验设计服务.屡次获奖,您的最佳设计合作伙伴,值得浏览 。',
-        bdDesc : '三人形思企划致力于品牌标志vi系统,网站建设,影视宣传片,画册折页,包装设计,环境导视,空间展示,庆典活动等品牌建立、推广、体验设计服务.屡次获奖,您的最佳设计合作伙伴,值得浏览 。',
-        bdUrl : 'http://www.sense-bd.com',
-        bdPic : 'http://www.sense-bd.com/images/banner-800.gif'
-    },
-    share : [{
-        "bdSize" : 16
-    }],
-}
-with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+        common : {
+            bdText : '三人形思企划致力于品牌标志vi系统,网站建设,影视宣传片,画册折页,包装设计,环境导视,空间展示,庆典活动等品牌建立、推广、体验设计服务.屡次获奖,您的最佳设计合作伙伴,值得浏览 。', 
+            bdDesc : '三人形思企划致力于品牌标志vi系统,网站建设,影视宣传片,画册折页,包装设计,环境导视,空间展示,庆典活动等品牌建立、推广、体验设计服务.屡次获奖,您的最佳设计合作伙伴,值得浏览 。', 
+            bdUrl : 'http://www.sense-bd.com',  
+            bdPic : 'http://www.sense-bd.com/images/banner-800.gif'
+        },
+        share : [{
+            "bdSize" : 16
+        }],
+    }
+    with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 function stopBodyScroll() {
-    var e = $("body").width();
-    $("body, html").addClass("-lock-scroll");
-    var t = $("body").width(),
-        r = t - e;
-    r && $("body").width(e + "px")
+	var e = $("body").width();
+	$("body, html").addClass("-lock-scroll");
+	var t = $("body").width(),
+		r = t - e;
+	r && $("body").width(e + "px")
 }
 function startBodyScroll() {
-    $("body, html").removeClass("-lock-scroll"), $("body").css("width", "100%")
+	$("body, html").removeClass("-lock-scroll"), $("body").css("width", "100%")
 }
-function scrollToObj(e,t){
-    $("html,body").animate({scrollTop: e.offset().top-$(".header").height()}, t);
+function scrollTo(e,t){
+	$("html,body").animate({scrollTop: e.offset().top-$(".header").height()}, t);
 }

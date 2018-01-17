@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <title>Title</title>
     <link rel="shortcut icon" href="assets/imgs/logo.ico">
     <link href="css/header/common.css" rel="stylesheet" type="text/css" />
     <link href="css/header/main.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/copyright-flow.css">
+    <link rel="stylesheet" href="css/sort-page.css">
 </head>
 <body>
 
@@ -63,10 +64,13 @@
         <div class="right bcontact">
             <ul class="menu s">
                 <li class="first"><a href="index.html">首页</a><div class="border"></div></li>
-                <li class="active"><a href="copyright-flow.html">版权登记</a><div class="border"></div></li>
-                <li class=""><a href="specification.html">常见问题</a><div class="border"></div></li>
-                <li class=""><a href="javascript:;">版权研究</a><div class="border"></div></li>
-                <li class=""><a href="javascript:;">更多服务</a><div class="border"></div></li>
+                <li class=""><a href="tm.html">商标版权</a><div class="border"></div></li>
+                <li class=""><a href="space.html">空视</a><div class="border"></div></li>
+                <li class=""><a href="web.html">网站电商</a><div class="border"></div></li>
+                <li class=""><a href="package.html">包装画册</a><div class="border"></div></li>
+                <li class=""><a href="movies.html">影视制作</a><div class="border"></div></li>
+                <li class=""><a href="vi.html">品牌设计</a><div class="border"></div></li>
+                <li><a href="javascript:showmoremenudialog();">介绍</a><div class="border"></div></li>
                 <div class="clearfix"></div>
             </ul>
             <div class="contact hasoprbtn">
@@ -75,8 +79,8 @@
                     <p>+86-022</p>
                     <p class="big">5868 5516</p>
                     <ul class="clearfix oprbtnlist">
-                        <li class="oprbtn othermenu" onclick="showmoremenudialog();"><img width="14" height="14" class="inject-svg" src="assets/imgs/header/dotdotdot.svg" /></li>
-                        <li class="oprbtn search" onclick="showsearchdialog();"><img width="14" height="14" class="inject-svg" src="assets/imgs/header/search.svg" /></li>
+                        <li class="oprbtn othermenu" onclick="showmoremenudialog();"><img width="14" height="14" class="inject-svg" src="https://d33wubrfki0l68.cloudfront.net/3fdb188080543769512136b7a10acfc5218260a9/3fc1e/img/dotdotdot.svg" /></li>
+                        <li class="oprbtn search" onclick="showsearchdialog();"><img width="14" height="14" class="inject-svg" src="https://d33wubrfki0l68.cloudfront.net/ef96b66a9477de58ee8e18d02f7eeeb64001cc7f/69c15/img/search.svg" /></li>
                     </ul>
                 </div>
             </div>
@@ -132,231 +136,445 @@
 </div>
 <!-- 通用头部代码 end-->
 
+<div class="container-fluid sort-page">
+    <!--top picture-->
+    <div class="row">
+        <a href="#">
+            <img class="img-responsive" src="./assets/imgs/title.jpg" alt="">
 
 
-
-
-
-<!--top picture-->
-<div class="row">
-    <a href="#">
-        <img class="img-responsive" src="./assets/imgs/title.jpg" alt="">
-    </a>
-</div>
-
-<!--subtitle-->
-<div class="subtitle text-center">
-    <small>没有版权保护的作品一旦面对剽窃、抄袭、侵权的行为，就面临证据不足、举证困难、难以维权问题</small><br/>
-    <small>No copyright protection works once faced with plagiarism, plagiarism, tortious acts,
-        faced with insufficient evidence, difficult evidence, difficult to rights</small>
-</div>
-
-<div class="brand text-center">
-    <div class="brand-title ">
-        为什么要及时版权登记
+        </a>
     </div>
-    <hr class="middle-hr"/>
-    <small>综合全方位保护</small>
-    <div class="row modules">
-        <div class="col-sm-offset-1 col-sm-10">
-            <div class="col-sm-3">
-                <div class="module">
-                    <img  src="assets/imgs/copyright-flow/source-icon-07.png" alt="">
-                    <h4>宣  传</h4>
-                    <small>通过登记机构的定期公告，可以向社会宣传自己的产品。有利于作品、软件的许可、转让、有利于作品、软件的传播和经济价值的实现。 </small>
-                </div>
+    <div class="tab-button-group text-center">
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-3">
+                    <a class="active" href="#brandCategory">
+                        按商标分类查询
+                    </a>
             </div>
-            <div class="col-sm-3">
-                <div class="module">
-                    <img  src="assets/imgs/copyright-flow/umbrella-icon-08.png" alt="">
-                    <h4>保  护</h4>
-                    <small>在发生著作权争议时，《作品登记证书》是主张权利的有力武器，同时是向人民法院提起诉讼，请求司法保护的前提。 </small>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="module">
-                    <img  src="assets/imgs/copyright-flow/badge-icon.png" alt="">
-                    <h4>荣  誉</h4>
-                    <small>《作品登记证书》是您水平的客观反映，国家权威部门对您能力的认可将使您在求职应聘时更加自信。</small>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="module">
-                    <img  src="assets/imgs/copyright-flow/gift-icon.png" alt="">
-                    <h4>福  利</h4>
-                    <small>企业申请是办理双软认定、高新技术企业认定得前提，可以享受国家税收优惠政策。</small>
-                </div>
+            <div class="col-sm-2 col-sm-offset-2">
+                <a href="#industryCategory">
+                    按行业类别推荐
+                </a>
             </div>
         </div>
     </div>
-</div>
+    <div class="tab-content">
+         <div class="active fade in tab-pane" id="brandCategory">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="content text-center">
-    <div class="content-title text-center">
-        哪些作品可以申请版权
-    </div>
-    <hr class="middle-hr"/>
-    <div class="row  modules text-left">
-        <div class="col-sm-offset-1 col-sm-10">
-            <div class="row first-row text-center">
-                <div class="col-sm-4 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/brand-icon.png" alt="">
+                    <!--dynamic-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <small>品牌名称</small>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>第一类:化学原料</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    用于工业、科学、摄影、农业、园艺和林业的化学品；未加工人造合成树脂；未加工塑料物质；肥料；灭火用合成物；淬火和焊接用制剂；保存食品用化学品；鞣料；工业用粘合剂。
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="col-sm-4 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/logo-icon.png" alt="">
+            </div>
+         </div>
+        <div class="tab-pane fade" id="industryCategory">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <small>logo</small>
-                </div>
-                <div class="col-sm-4 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/slogan-icon.png" alt="">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <small>口号</small>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="module">
+                                <h5>化学专业</h5>
+                                <div class="right-line-box">
+                                    <div class="right-line"></div>
+                                </div>
+                                <p>
+                                    我就是化学专业
+                                </p>
+                                <div class="download-btn">
+                                    <button class="btn btn-link">下载商品明细</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="row second-row text-center">
-                <div class="col-sm-4 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/pack-icon.png" alt="">
-                    </div>
-                    <small>产品包装</small>
-                </div>
-                <div class="col-sm-4 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/mascot-icon.png" alt="">
-                    </div>
-                    <small>吉祥物</small>
-                </div>
-                <div class="col-sm-4 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/brand-style-icon.png" alt="">
-                    </div>
-                    <small>品牌风格图形</small>
-                </div>
-            </div>
-            <div class="row third-row text-center">
-                <div class="col-sm-3 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/store-front-icon.png" alt="">
-                    </div>
-                    <small>门头</small>
-                </div>
-                <div class="col-sm-3 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/store-front-space-icon.png" alt="">
-                    </div>
-                    <small>店面空间</small>
-                </div>
-                <div class="col-sm-3 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/video-icon.png" alt="">
-                    </div>
-                    <small>摄影作品</small>
-                </div>
-                <div class="col-sm-3 module">
-                    <div>
-                        <img src="./assets/imgs/copyright-flow/product-design.png" alt="">
-                    </div>
-                    <small>产品设计图</small>
-                </div>
-            </div>
         </div>
     </div>
-</div>
 
-<div class="shop-registry text-center">
-    <div class="shop-registry-title">
-        版权登记流程
-    </div>
-    <hr>
-    <div class="row shop-registry-modules">
-        <div class="col-sm-2 col-sm-offset-1 text-center">
-            <div class="shop-registry-module">
-                <img  src="assets/imgs/copyright-flow/atom-icon.png" alt="">
-                <h5><strong>免费判定版权类型</strong></h5>
-                <small>判定登记版权是否具备版权
-                    登记条件及登记类型</small>
-            </div>
-        </div>
-        <div class="col-sm-2 text-center">
-            <div class="shop-registry-module">
-                <img  src="assets/imgs/copyright-flow/lock-icon.png" alt="">
-                <h5><strong>签订保密协议</strong></h5>
-                <small>本公司与您签订保密协议</small>
-            </div>
-        </div>
-        <div class="col-sm-2 text-center">
-            <div class="shop-registry-module">
-                <img  src="assets/imgs/copyright-flow/target-icon.png" alt="">
-                <h5><strong>撰写作品说明书</strong></h5>
-                <small>签订代理委托协议，开始撰写作品
-                    说明书（自己撰写亦可)</small>
-            </div>
-        </div>
-        <div class="col-sm-2 text-center">
-            <div class="shop-registry-module">
-                <img  src="assets/imgs/copyright-flow/air-icon.png" alt="">
-                <h5><strong>提交版权登记文件</strong></h5>
-                <small>向版权局提交版权登记文件获取
-                    版权受理通知书</small>
-            </div>
-        </div>
-        <div class="col-sm-2 text-center">
-            <div class="shop-registry-module">
-                <img  src="assets/imgs/copyright-flow/shield-icon.png" alt="">
-                <h5><strong>领取登记证书</strong></h5>
-                <small>收到版权登记证书</small>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="function text-center">
-    <div class="function-title text-center">
-        <span>做品牌，仅版权登记远远不够</span>
-    </div>
-    <hr class="middle-hr">
-
-    <div class="function-modules row text-left">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="col-md-2">
-                <img src="./assets/imgs/scheme-design.png" alt="">
-                <h5>品牌策略设计</h5>
-                <small>标志logo设计|商标设计|品牌设计</small>
-            </div>
-            <div class="col-md-2">
-                <img src="./assets/imgs/album-design.png" alt="">
-                <h5>画册设计</h5>
-                <small>标志logo设计|商标设计|品牌设计</small>
-            </div>
-
-            <div class="col-md-2">
-                <img src="./assets/imgs/packing-design.png" alt="">
-                <h5>包装设计</h5>
-                <small>标志logo设计|商标设计|品牌设计</small>
-            </div>
-            <div class="col-md-2">
-                <img src="./assets/imgs/website-construct.png" alt="">
-                <h5>网站建设</h5>
-                <small>标志logo设计|商标设计|品牌设计</small>
-            </div>
-            <div class="col-md-2">
-                <img src="./assets/imgs/movie-media.png" alt="">
-                <h5>影视媒体</h5>
-                <small>标志logo设计|商标设计|品牌设计</small>
-            </div>
-            <div class="col-md-2">
-                <img src="./assets/imgs/brand-registry.png" alt="">
-                <h5>商标注册</h5>
-                <small>标志logo设计|商标设计|品牌设计</small>
-            </div>
-        </div>
-    </div>
 </div>
 
 
@@ -556,12 +774,15 @@
 </div>
 <!-- 通用底部代码 end-->
 
+
+
 <!--[if lte IE 9]>
 <script src="assets/js/respond.min.js"></script>
 <script src="assets/js/html5shiv.min.js"></script>
 <![endif]-->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
+
 <!--header-footer footer-->
 <script src="assets/js/header-footer/common.js"></script>
 <script src="assets/js/header-footer/owl.carousel.min.js"></script>
@@ -849,12 +1070,14 @@
     }
 </script>
 
-
-
-
-
 <script>
+    $('.tab-button-group a').click(function (e) {
+        e.preventDefault();
 
+        $('.tab-button-group a.active').removeClass('active');
+
+        $(this).tab('show').addClass('active');
+    });
 </script>
 </body>
 </html>

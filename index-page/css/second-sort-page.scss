@@ -33,33 +33,33 @@ a {
 }
 
 .tab-content {
-
-
-  button {
-    font-size: $ssFontSize;
-    width: 100%;
-    padding: 0;
-    height: 30px;
-    & a {
+  .first-sort-page {
+    button {
       font-size: $ssFontSize;
-      display: block;
-      padding: 6px 0;
+      width: 100%;
+      padding: 0;
+      height: 30px;
+      & a {
+        font-size: $ssFontSize;
+        display: block;
+        padding: 6px 0;
+      }
+
     }
 
+    .module {
+      padding: 35px 0;
+      border-top: 1px solid #dddddd;
+
+      &:last-child {
+        border-bottom: 1px solid #dddddd;
+      }
+      h5 {
+        background: $mainColor;
+        padding: 42px 0;
+        color: white;
+      }
   }
-
-  .module {
-    padding: 35px 0;
-    border-top: 1px solid #dddddd;
-
-    &:last-child {
-      border-bottom: 1px solid #dddddd;
-    }
-    h5 {
-      background: $mainColor;
-      padding: 42px 0;
-      color: white;
-    }
 
   }
 

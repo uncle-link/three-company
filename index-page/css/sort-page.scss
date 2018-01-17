@@ -6,20 +6,7 @@ $mainColor: #2ea7e0;
 
 /*mixin*/
 
-.tab-button-group {
-  a {
-    color: black;
-  }
-  a.active {
-    color: $mainColor;
-  }
-
-  padding: 20px;
-  span {
-    cursor: pointer;
-  }
-}
-.tab-content {
+.second-sort-page {
 
   h5 {
     font-weight: 300;

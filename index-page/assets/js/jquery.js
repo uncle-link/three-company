@@ -4436,7 +4436,7 @@ var rscriptType = ( /^$|\/(?:java|ecma)script/i );
 var rleadingWhitespace = ( /^\s+/ );
 
 var nodeNames = "abbr|article|aside|audio|bdi|canvas|data|datalist|" +
-		"details|dialog|figcaption|figure|footer|header|hgroup|main|" +
+		"details|dialog|figcaption|figure|footer|header-footer|hgroup|main|" +
 		"mark|meter|nav|output|picture|progress|section|summary|template|time|video";
 
 
@@ -9353,7 +9353,7 @@ jQuery.extend( {
 	// Counter for holding the number of active queries
 	active: 0,
 
-	// Last-Modified header cache for next request
+	// Last-Modified header-footer cache for next request
 	lastModified: {},
 	etag: {},
 
@@ -9530,7 +9530,7 @@ jQuery.extend( {
 					return state === 2 ? responseHeadersString : null;
 				},
 
-				// Caches the header
+				// Caches the header-footer
 				setRequestHeader: function( name, value ) {
 					var lname = name.toLowerCase();
 					if ( !state ) {
@@ -9540,7 +9540,7 @@ jQuery.extend( {
 					return this;
 				},
 
-				// Overrides response content-type header
+				// Overrides response content-type header-footer
 				overrideMimeType: function( type ) {
 					if ( !state ) {
 						s.mimeType = type;
@@ -9636,7 +9636,7 @@ jQuery.extend( {
 		s.hasContent = !rnoContent.test( s.type );
 
 		// Save the URL in case we're toying with the If-Modified-Since
-		// and/or If-None-Match header later on
+		// and/or If-None-Match header-footer later on
 		cacheURL = s.url;
 
 		// More options handling for requests with no content
@@ -9662,7 +9662,7 @@ jQuery.extend( {
 			}
 		}
 
-		// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
+		// Set the If-Modified-Since and/or If-None-Match header-footer, if in ifModified mode.
 		if ( s.ifModified ) {
 			if ( jQuery.lastModified[ cacheURL ] ) {
 				jqXHR.setRequestHeader( "If-Modified-Since", jQuery.lastModified[ cacheURL ] );
@@ -9672,12 +9672,12 @@ jQuery.extend( {
 			}
 		}
 
-		// Set the correct header, if data is being sent
+		// Set the correct header-footer, if data is being sent
 		if ( s.data && s.hasContent && s.contentType !== false || options.contentType ) {
 			jqXHR.setRequestHeader( "Content-Type", s.contentType );
 		}
 
-		// Set the Accepts header for the server, depending on the dataType
+		// Set the Accepts header-footer for the server, depending on the dataType
 		jqXHR.setRequestHeader(
 			"Accept",
 			s.dataTypes[ 0 ] && s.accepts[ s.dataTypes[ 0 ] ] ?
@@ -9791,7 +9791,7 @@ jQuery.extend( {
 			// If successful, handle type chaining
 			if ( isSuccess ) {
 
-				// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
+				// Set the If-Modified-Since and/or If-None-Match header-footer, if in ifModified mode.
 				if ( s.ifModified ) {
 					modified = jqXHR.getResponseHeader( "Last-Modified" );
 					if ( modified ) {
@@ -10225,11 +10225,11 @@ if ( xhrSupported ) {
 						xhr.overrideMimeType( options.mimeType );
 					}
 
-					// X-Requested-With header
+					// X-Requested-With header-footer
 					// For cross-domain requests, seeing as conditions for a preflight are
 					// akin to a jigsaw puzzle, we simply never set it to be sure.
 					// (it can always be set on a per-request basis or even using ajaxSetup)
-					// For same-domain requests, won't change header if already provided.
+					// For same-domain requests, won't change header-footer if already provided.
 					if ( !options.crossDomain && !headers[ "X-Requested-With" ] ) {
 						headers[ "X-Requested-With" ] = "XMLHttpRequest";
 					}
@@ -10239,7 +10239,7 @@ if ( xhrSupported ) {
 
 						// Support: IE<9
 						// IE's ActiveXObject throws a 'Type Mismatch' exception when setting
-						// request header to a null-value.
+						// request header-footer to a null-value.
 						//
 						// To keep consistent with other XHR implementations, cast the value
 						// to string and ignore `undefined`.
