@@ -39,6 +39,16 @@
 .content .module small {
   font-size: 10px;
 }
+
+.module {
+  div {
+    margin: 5px 0 30px;
+  }
+  img {
+    height: 30px;
+  }
+}
+
 .content .text-left .module:first-child {
   background: #00a29a;
 }
