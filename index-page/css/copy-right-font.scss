@@ -1,0 +1,50 @@
+@import "common-font";
+
+.brand .module small {
+  @extend .two-h;
+}
+
+.brand {
+  .module {
+    h4 {
+      @extend .big-1-h;
+    }
+    small {
+      @extend .six-h;
+    }
+  }
+}
+
+.content {
+  .module {
+    h4 {
+      @extend .b-big-1-h;
+    }
+    small {
+      @extend .four-h;
+    }
+  }
+}
+
+.shop-registry {
+  .shop-registry-module {
+    h5 {
+      @extend .three-h;
+    }
+    small {
+      @extend .five-h;
+    }
+  }
+  .shop-registry-hint {
+    @extend .five-h;
+  }
+}
+
+.function {
+  h5 {
+    @extend .small-1-h;
+  }
+  small {
+    @extend .small-f;
+  }
+}

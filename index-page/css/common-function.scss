@@ -1,0 +1,9 @@
+
+@mixin verticalContainer {
+  display: table;
+}
+
+@mixin verticalCell {
+  display: table-cell;
+  vertical-align: middle;
+}

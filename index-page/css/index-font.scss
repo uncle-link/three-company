@@ -1,0 +1,82 @@
+@import "common-font";
+
+.brand .module small {
+  @extend .two-h;
+}
+.content {
+  .module {
+    h4 {
+      @extend .b-big-1-h;
+    }
+    small {
+      @extend .four-h;
+    }
+  }
+}
+
+.meal-button-group {
+  .btn {
+    @extend .five-h;
+  }
+
+}
+.meal {
+  .tab-list-title {
+    @extend .four-h;
+  }
+  .tab-list-title + p small {
+    @extend .normal-f;
+  }
+  .tab-content {
+    button {
+      @extend .six-h;
+    }
+  }
+  .meal-download .btn{
+    @extend .six-h;
+  }
+}
+
+.shop-registry {
+  .shop-registry-module {
+    h5 {
+      @extend .three-h;
+    }
+    small {
+      @extend .five-h;
+    }
+  }
+  .shop-registry-hint {
+    @extend .five-h;
+  }
+}
+.registry-risk {
+  .registry-risk-module-title {
+    @extend .three-h;
+  }
+  .registry-risk-module-title + h6 {
+    @extend .small-4-h;
+  }
+}
+
+.common-problem {
+  .first-list {
+    li {
+      @extend .five-h;
+    }
+  }
+  .second-list,.third-list {
+    .list-group-item {
+      @extend .small-4-h;
+    }
+  }
+}
+
+.function {
+  h5 {
+    @extend .small-1-h;
+  }
+  small {
+    @extend .small-f;
+  }
+}

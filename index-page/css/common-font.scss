@@ -1,0 +1,52 @@
+$big1h: 36px;
+$bbig1h: 41px;
+$oneh: 32px;
+$small1h: 30px;
+$twoh: 26px;
+$threeh: 24px;
+$fourh: 21px;
+$small4h: 20px;
+$fiveh: 18px;
+$sixh: 16px;
+$normalf: 14px;
+$smallf: 12px;
+
+.b-big-1-h {
+  font-size: $bbig1h;
+}
+.big-1-h {
+  font-size: $big1h;
+}
+.one-h {
+  font: {
+    size: $oneh;
+  }
+}
+.small-1-h {
+  font-size: $small1h;
+}
+.two-h {
+  font-size: $twoh;
+}
+.three-h {
+  font-size: $threeh;
+}
+.four-h {
+  font-size: $fourh;
+}
+.small-4-h {
+  font-size: $small4h;
+}
+.five-h {
+  font-size: $fiveh;
+}
+.six-h {
+  font-size: $sixh;
+}
+.normal-f {
+  font-size: 14px;
+}
+.small-f {
+  font-size: $smallf;
+}
+
