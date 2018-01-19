@@ -1,24 +1,39 @@
-/*global*/
-.index-page .btn{
-    padding: 5px 25px;
-    margin-bottom: 10px;
-}
+$hoverColorPercent: 20%;
 
 @media (min-width: 992px) {
     .col-md-offset-1 {
-        margin-left: 3.333333%;
+        margin-left: 2.333333%;
     }
     .col-md-1 {
-        width:3.333333%;
+        width: 2.333333%;
     }
     .col-md-2 {
-        width: 18.666667%;
+        width: 19.066667%;
     }
     .col-md-10 {
-        width: 93.33333333%
+        width: 95.333333%;
     }
     .function-modules .col-md-2 {
         width: 16.66666667%;
+    }
+    .shop-registry-modules .col-md-offset-1{
+        margin-left: 1.333333%;
+    }
+    .shop-registry-modules .col-md-10{
+        width: 97.333333%;
+    }
+
+
+    /*global*/
+    .index-page .btn{
+        padding: 5px 25px;
+        margin-bottom: 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .tab-content .left-panel, .tab-content .right-panel {
+        padding: 30px 100px 45px;
     }
 }
 
@@ -30,11 +45,12 @@
         width: 100%;
     }
 }
-@media (max-width: 960px) and (min-width: 765px) {
-    .content .text-center .module {
-        height: 190px;
+@media (max-width: 1200px) and (min-width: 992px) {
+    .registry-risk-modules div.col-md-4 {
+        height: 500px;
     }
 }
+
 /*private*/
 .subtitle {
     padding: 15px 0;
@@ -47,7 +63,7 @@
     transition: .3s;
 }
 .brand .module:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     z-index: 1;
 }
 
@@ -70,6 +86,7 @@
     text-align: center;
     display: table;
 }
+
 .brand .module small, .content .module div {
     display: table-cell;
     vertical-align: middle;
@@ -88,17 +105,52 @@
     padding: 0;
     text-align: center;
 }
-.content .text-left .module:first-child {
-    background: #00a29a;
+.content {
+  .text-left {
+    .module {
+      &:first-child{
+        background: #00a29a;
+        &:hover {
+          background: darken(#00a29a,$hoverColorPercent);
+        }
+      }
+      &:first-child + .module {
+        background: #2ea7e0;
+        &:hover {
+          background: darken(#2ea7e0, $hoverColorPercent);
+        }
+      }
+      &:first-child + .module + .module {
+        background: #172a88;
+        &:hover {
+          background: darken(#172a88, $hoverColorPercent);
+        }
+      }
+    }
+  }
 }
-.content .text-left .module:first-child + .module {
-    background: #2ea7e0;
-}
-.content .text-left .module:first-child + .module + .module {
-    background: #172a88;
+.content {
+  .text-center {
+    .module {
+      &:first-child:hover {
+        background: darken(#8fc31f, $hoverColorPercent);
+      }
+      &:first-child + .module:hover {
+         background: darken(#00913a, $hoverColorPercent);
+      }
+      &:first-child + .module + .module:hover {
+        background: darken(#00a29a, $hoverColorPercent);
+      }
+      &:first-child + .module + .module + .module:hover {
+        background: darken(#036eb8, $hoverColorPercent);
+      }
+      &:first-child + .module + .module + .module + .module:hover {
+        background: darken(#036eb8, $hoverColorPercent);
+      }
+    }
+  }
 }
 
-/*5列*/
 .content .text-center .module:first-child,.brand .module:first-child {
     background: #8fc31f;
 }
@@ -161,10 +213,9 @@
 }
 .tab-content .left-panel {
     border-right: 3px solid white;
-    padding: 30px 127px 45px;
 }
-.tab-content .right-panel {
-    padding: 30px 127px 45px;
+.tab-content .btn {
+    width: 100%;
 }
 .meal {
     margin-top: 160px;
@@ -221,11 +272,14 @@
 .registry-risk-module-title {
     margin-bottom: 40px;
 }
+.registry-risk-modules h6 {
+    line-height: 39px;
+}
 .registry-risk-modules .col-md-4 {
     padding: 50px 26px 0;
     border: 1px solid #ddd;
     cursor: pointer;
-    height: 380px;
+    height: 420px;
     -moz-transition:  .3s;
     -ms-transition: .3s;
     transition: .3s;
@@ -250,6 +304,7 @@
 }
 .common-problem-modules .first-list li {
     margin-top: 3px;
+    line-height: 38px;
 }
 .common-problem-modules a:hover {
     text-decoration: none;
@@ -260,7 +315,7 @@
 .common-problem-modules .list-group-item {
     border-left: none;
     border-right: none;
-    padding: 12px 15px;
+    padding: 20px 15px;
 }
 
 .function-modules {
