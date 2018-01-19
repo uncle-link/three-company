@@ -1,9 +1,26 @@
-/*font-size*/
-$ssFontSize: 10px;
 
 /*color*/
 $mainColor: #2ea7e0;
 
+/*global*/
+.sort-page .btn {
+  width: 192px;
+  height: 53px;
+}
+@media (min-width: 992px) {
+  .col-md-offset-1 {
+    margin-left: 3.333333%;
+  }
+  .col-md-10 {
+    width: 93.33333333%
+  }
+  .first-sort-page .tab-content {
+    .col-md-offset-1 {
+      margin-left: 8.33333333%;
+    }
+  }
+
+}
 /*mixin*/
 
 .second-sort-page {
@@ -14,12 +31,10 @@ $mainColor: #2ea7e0;
 
   }
   p {
-    font-size: $ssFontSize;
     padding: 0 25px 0 50px;
 
   }
   button {
-    font-size: $ssFontSize;
     background: #efefef;
     color: $mainColor;
   }

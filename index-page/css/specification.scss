@@ -1,8 +1,15 @@
-/*font-size*/
-$ssFontSize: 10px;
 /*color*/
 $mainColor: #2ea7e0;
 /*global*/
+@media (min-width: 992px) {
+  .col-md-offset-1 {
+    margin-left: 3.333333%;
+  }
+  .col-md-10 {
+    width: 93.33333333%
+  }
+}
+
 a {
   color: black;
   &:hover {
@@ -24,14 +31,13 @@ a {
 .first-col {
   .list-group-item {
     padding-left: 0;
-    font-size: 12px;
     border: none;
   }
 }
 
 .second-col {
   li {
-    padding: 12px 0;
+    padding: 53px 0;
     border-top: 1px dashed #aaa;
     &:first-child {
       border-top: 1px solid #3f3b3a;
@@ -42,10 +48,8 @@ a {
   padding: 14px 0;
 }
 .list-title {
-  font-size: 13px;
   margin: 8px 0;
 }
 .list-body{
-  font-size: 11px;
-  line-height: 30px;
+  line-height: 38px;
 }
