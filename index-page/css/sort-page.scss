@@ -1,6 +1,11 @@
 
 /*color*/
 $mainColor: #2ea7e0;
+/*mixin*/
+@mixin paddingSmall($value: 2px) {
+  padding-right: $value;
+  padding-left: $value;
+}
 
 /*global*/
 .sort-page .btn {
@@ -8,15 +13,27 @@ $mainColor: #2ea7e0;
   height: 53px;
 }
 @media (min-width: 992px) {
+  .col-md-2 {
+    width: 15.666667%;
+  }
   .col-md-offset-1 {
     margin-left: 2.333333%;
   }
   .col-md-10 {
     width: 95.33333333%
   }
+  .first-col {
+    @include paddingSmall(0);
+  }
+  .second-col {
+    width: 42.333333%;
+  }
+  .third-col.col-md-4 {
+    width: 34.333333%;
+  }
   .first-sort-page .tab-content {
     .col-md-offset-1 {
-      margin-left: 8.33333333%;
+      margin-left: 5.333333%;
     }
   }
 
@@ -26,7 +43,6 @@ $mainColor: #2ea7e0;
 .second-sort-page {
 
   h5 {
-    font-weight: 300;
     padding: 15px 25px 0 50px;
 
   }
@@ -57,7 +73,14 @@ $mainColor: #2ea7e0;
     border: 1px solid #b5b5b6;
     margin-bottom: 10px;
     cursor: pointer;
-
+    h5 {
+      position: relative;
+    }
+    img {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+    }
     &:hover {
       background: $mainColor;
       color: white;

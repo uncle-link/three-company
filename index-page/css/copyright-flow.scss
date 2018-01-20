@@ -6,7 +6,7 @@
 
 @media (min-width: 992px) {
   .col-md-offset-1 {
-    margin-left: 2.333333%;
+    margin-left: 1.233333%;
   }
   .col-md-1 {
     width:3.333333%;
@@ -15,22 +15,25 @@
     width: 18.666667%;
   }
   .col-md-10 {
-    width: 95.633333%;
+    width: 97.733333%;
+
+
   }
   .content {
     .col-md-offset-1 {
-      margin-left: 3.333333%;
+      margin-left: 2.333333%;
     }
     .col-md-10 {
-      width: 93.633333%;
+      width: 95.633333%;
     }
   }
+
   .shop-registry-modules {
     .col-md-offset-1 {
-      margin-left: 3.133333%;
+      margin-left: 2.233333%;
     }
     .col-md-2 {
-      width: 18.766667%;
+      width: 19.166667%;
     }
   }
   .function-modules .col-md-2 {
@@ -43,14 +46,17 @@
       height: 100%;
     }
   }
+  .first-row .module:first-child {
+  }
 }
 
 
 .middle-hr {
   height: 3px;
-  background: black;
+  background: #313131;
   width: 70px;
   margin: 6px auto;
+  border: none;
 }
 
 /*mixin*/
@@ -86,7 +92,7 @@
   .module {
     background: white;
     height: 332px;
-    padding: 20px 4px 0;
+    padding: 20px 26px 0;
     margin-bottom: 10px;
     img {
       height: 76px;
@@ -112,29 +118,28 @@
   margin-bottom: 75px;
 }
 
+.content img {
+  max-width: 100%;
+}
 
 .content .module {
-  height: 151px;
+  height: 300px;
   background: greenyellow;
   color: white;
   padding: 23px 23px 0 23px;
 
   div {
-    margin: 5px 0 30px;
-  }
-  img {
-    height: 43px;
+    margin: 54px 0 30px;
   }
   transition: .3s;
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     z-index: 1;
   }
 }
 
 .first-row .module:first-child {
   background: #172a88;
-
 }
 .first-row .module:first-child + .module {
   background: #00a29a;
@@ -153,7 +158,6 @@
 .second-row .module:first-child + .module + .module {
   background: #172a88;
 }
-
 .third-row .module:first-child {
   background: #8fc31f;
 }
@@ -191,6 +195,10 @@
 .shop-registry-modules {
   img {
     height: 50px;
+    transition: .1s;
+    &:hover {
+      transform: scale(1.2);
+    }
   }
   .col-md-2 {
     @include paddingSmall(4px);
@@ -199,7 +207,7 @@
     background: white ;
     padding: 35px 30px 0;
     margin-bottom: 10px;
-    height: 380px;
+    height: 350px;
     cursor: pointer;
     h5 {
       margin: 23px 0 60px;

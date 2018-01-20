@@ -76,16 +76,17 @@ a {
   }
 
   .second-col {
+    .row {
+      margin-bottom: 10px;
 
-    margin-bottom: 10px;
+      .btn {
+        width: 100%;
+        margin-bottom: 5px;
 
-    .btn {
-      width: 100%;
-      margin-bottom: 5px;
-
-    }
-    .col-sm-6 {
-      @include paddingSmall();
+      }
+      .col-sm-6 {
+        @include paddingSmall();
+      }
     }
   }
 
@@ -94,13 +95,16 @@ a {
     background: $mainColor;
     height: 1px;
   }
+  .third-col {
+    @include paddingSmall(0);
+  }
   .third-col-title {
     color: $mainColor;
   }
   .third-col-body {
     &  span {
       display: inline-block;
-      margin-right: 15px;
+      margin-right: 9px;
       margin-bottom: 15px;
       &:hover{
         color: $mainColor;
@@ -109,7 +113,7 @@ a {
   }
   .third-col-footer {
     .col-md-5 {
-      @include paddingSmall();
+      padding-right: 2px;
     }
     button {
       &:hover {

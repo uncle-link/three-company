@@ -1,6 +1,5 @@
 $hoverColorPercent: 20%;
 
-
 @media (min-width: 992px) {
     .col-md-offset-1 {
         margin-left: 2.333333%;
@@ -52,7 +51,10 @@ $hoverColorPercent: 20%;
     }
 }
 
+
+
 /*private*/
+
 .subtitle {
     padding: 15px 0;
 }
@@ -230,7 +232,7 @@ $hoverColorPercent: 20%;
 }
 
 .meal-download {
-    margin: 15px 0 50px 0;
+    margin: 31px 0 50px 0;
 }
 
 .shop-registry-modules img {
@@ -254,7 +256,7 @@ $hoverColorPercent: 20%;
     margin-top: 8px;
 }
 .shop-registry-modules .shop-registry-module {
-    background: white ;
+    background: #f1f1f1 ;
     padding: 30px 30px 0;
     margin-bottom: 10px;
     height: 273px;
@@ -299,13 +301,14 @@ $hoverColorPercent: 20%;
     padding-top: 20px;
 }
 
-.common-problem-modules .first-list ol{
+.common-problem-modules .first-list ul{
     margin-top: 20px;
     padding-left: 10px;
 }
 .common-problem-modules .first-list li {
     margin-top: 3px;
     line-height: 38px;
+  list-style: disc;
 }
 .common-problem-modules a:hover {
     text-decoration: none;
