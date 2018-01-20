@@ -6,7 +6,7 @@
 
 @media (min-width: 992px) {
   .col-md-offset-1 {
-    margin-left: 3.333333%;
+    margin-left: 2.333333%;
   }
   .col-md-1 {
     width:3.333333%;
@@ -15,7 +15,23 @@
     width: 18.666667%;
   }
   .col-md-10 {
-    width: 93.33333333%
+    width: 95.633333%;
+  }
+  .content {
+    .col-md-offset-1 {
+      margin-left: 3.333333%;
+    }
+    .col-md-10 {
+      width: 93.633333%;
+    }
+  }
+  .shop-registry-modules {
+    .col-md-offset-1 {
+      margin-left: 3.133333%;
+    }
+    .col-md-2 {
+      width: 18.766667%;
+    }
   }
   .function-modules .col-md-2 {
     width: 16.66666667%;
