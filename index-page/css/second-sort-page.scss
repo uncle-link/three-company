@@ -53,7 +53,11 @@ a {
       h5 {
         background: $mainColor;
         padding: 42px 0;
+        margin: 4px 0 10px 0;
         color: white;
+        &:hover {
+          background: darken($mainColor, 30%);
+        }
       }
   }
 
@@ -62,6 +66,12 @@ a {
   .first-col {
     .download-btn {
       padding: 10px 0;
+      .btn {
+        &:hover {
+          background: $mainColor;
+          color: white;
+        }
+      }
     }
   }
 
