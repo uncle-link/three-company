@@ -1,53 +1,12 @@
+@import "common-function.scss";
+@import "common-fonts.scss";
+@import "common-structure.scss";
+
+@import "copy-right-font.scss";
 
 /*common*/
- .content-title, .common-problem-title, .function-title {
+.content-title, .common-problem-title, .function-title {
   margin-top: 65px;
-}
-
-@media (min-width: 992px) {
-  .col-md-offset-1 {
-    margin-left: 1.233333%;
-  }
-  .col-md-1 {
-    width:3.333333%;
-  }
-  .col-md-2 {
-    width: 18.666667%;
-  }
-  .col-md-10 {
-    width: 97.733333%;
-
-
-  }
-  .content {
-    .col-md-offset-1 {
-      margin-left: 2.333333%;
-    }
-    .col-md-10 {
-      width: 95.633333%;
-    }
-  }
-
-  .shop-registry-modules {
-    .col-md-offset-1 {
-      margin-left: 2.233333%;
-    }
-    .col-md-2 {
-      width: 19.166667%;
-    }
-  }
-  .function-modules .col-md-2 {
-    width: 16.66666667%;
-  }
-}
-@media (max-width: 991px) {
-  .brand {
-    div.brand-background {
-      height: 100%;
-    }
-  }
-  .first-row .module:first-child {
-  }
 }
 
 
@@ -57,12 +16,6 @@
   width: 70px;
   margin: 6px auto;
   border: none;
-}
-
-/*mixin*/
-@mixin paddingSmall($value: 2px) {
-  padding-right: $value;
-  padding-left: $value;
 }
 
 /*subtitle*/
@@ -82,6 +35,11 @@
   position: relative;
   margin-top: 65px;
   padding-top: 35px;
+  margin-left: -15px;
+  margin-right: -15px;
+  .max-width {
+    @include maxWidth();
+  }
   .modules {
     position: relative;
     top: 54px;
@@ -116,6 +74,7 @@
 .content .modules {
   margin-top: 30px;
   margin-bottom: 75px;
+  @include maxWidth()
 }
 
 .content img {
@@ -172,7 +131,6 @@
   background: #036eb8;
 }
 
-/*shop-regisry*/
 
 /*compatibility*/
 .shop-registry {
@@ -181,6 +139,8 @@
           cover;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/imgs/goods-registry.jpg',sizingMethod='scale');
   background-size: 100% 100%;
   padding: 45px 0 60px 0;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 .shop-registry hr {
   width: 70px;
@@ -193,8 +153,9 @@
   color: white;
 }
 .shop-registry-modules {
+  @include maxWidth(100%);
   img {
-    height: 50px;
+    height: 100px;
     transition: .1s;
     &:hover {
       transform: scale(1.2);
@@ -284,4 +245,52 @@
 }
 .function-modules .col-md-2:first-child + .col-md-2 + .col-md-2 + .col-md-2 + .col-md-2 + .col-md-2 {
   background: #542b8c;
+}
+
+@media (max-width: 991px) {
+  .brand {
+    div.brand-background {
+      height: 100%;
+    }
+  }
+  .function-modules .col-md-2 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-offset-1 {
+    margin-left: 1.233333%;
+  }
+  .col-md-1 {
+    width:3.333333%;
+  }
+  .col-md-2 {
+    width: 20%;
+  }
+  .col-md-10 {
+    width: 97.733333%;
+
+  }
+
+
+  .content {
+    .col-md-offset-1 {
+      margin-left: 2.333333%;
+    }
+    .col-md-10 {
+      width: 95.633333%;
+    }
+  }
+  .shop-registry-modules {
+    .col-md-offset-1 {
+      margin-left: 2.233333%;
+    }
+    .col-md-2 {
+      width: 19.166667%;
+    }
+  }
+  .function-modules .col-md-2 {
+    width: 16.66666667%;
+  }
 }

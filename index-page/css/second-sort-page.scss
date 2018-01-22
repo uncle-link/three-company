@@ -1,4 +1,8 @@
+@import "common-function.scss";
+@import "common-fonts.scss";
+@import "common-structure.scss";
 
+@import "sort-page-font";
 /*color*/
 $mainColor: #2ea7e0;
 
@@ -7,6 +11,7 @@ $mainColor: #2ea7e0;
   padding-right: $value;
   padding-left: $value;
 }
+
 
 /*global*/
 a {
@@ -46,7 +51,13 @@ a {
     .module {
       padding: 35px 0;
       border-top: 1px solid #dddddd;
-
+      overflow: hidden;
+      @include maxWidth();
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
       &:last-child {
         border-bottom: 1px solid #dddddd;
       }
@@ -127,3 +138,4 @@ a {
   }
 
 }
+@import "sort-page";

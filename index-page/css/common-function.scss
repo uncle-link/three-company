@@ -1,9 +1,58 @@
+/*mixin*/
 
 @mixin verticalContainer {
   display: table;
 }
 
+@mixin clearPadding2Zero($isEven: false, $slot: 15px) {
+  @media(min-width: 992px) {
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  @media (max-width: 991px) {
+    &:nth-of-type(2n) {
+      padding-right: 0;
+    }
+    &:nth-of-type(2n + 1) {
+      padding-left: 0;
+    }
+    @if $isEven {
+      &:last-child {
+        padding-left: $slot;
+        padding-right: $slot;
+      }
+    }
+  }
+}
+
+@mixin paddingSmall($value: 2px, $isDouble: true, $isEven: false, $slot: 15px) {
+  padding-right: $value;
+  padding-left: $value;
+  @if $isDouble {
+    @if $isEven {
+      @include clearPadding2Zero(true, $slot);
+    } @else {
+      @include clearPadding2Zero();
+    }
+  }
+
+}
+
+
 @mixin verticalCell {
   display: table-cell;
   vertical-align: middle;
 }
+
+@mixin maxWidth($width: 95%, $maxWidth: 1700px) {
+  display: block;
+  margin: 0 auto;
+  max-width: $maxWidth;
+  width: $width;
+}
+
+
