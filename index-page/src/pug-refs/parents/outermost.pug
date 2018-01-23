@@ -1,0 +1,612 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1")
+        link(rel="shortcut icon" href="../assets/imgs/logo.ico")
+        link(href="../common/css/header/common.css" rel="stylesheet" type="text/css")
+        link(href="../common/css/header/main.css" rel="stylesheet" type="text/css")
+        link(rel="stylesheet" href="../assets/lib/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet" href="../common/css/header/owl.carousel.css")
+        link(rel="stylesheet" href="../common/css/header/owl.theme.css")
+    body
+
+        .mobilemenu.slideDownRetourn.magictime
+            .box.maxbox
+                .menuset
+                    .settitle 标志vi设计版块
+                    ui.clearfix
+                        li: a(href="../../index.html") 标志vi设计
+                        li: a(href="case.html") 案例代表
+                        li: a(href="design.html") 委托设计
+                        li: a(href="brand.html") 品牌研究
+                        li(class="disable"): a(href="javascript:;") 开发中
+                        li(class="disable"): a(href="javascript:;") 开发中
+                .line
+                .menuset
+                    .settitle 专业领域
+                    ul.clearfix
+                        li: a(href="http://www.sensebrand.com.cn") 标志vi设计首页
+                        li: a(href="http://bz.sensebrand.com.cn") 包装设计
+                        li: a(href="http://hc.sensebrand.com.cn") 画册设计
+                        li: a(href="http://web.sensebrand.com.cn") 网站建设
+                        li: a(href="http://video.sensebrand.com.cn") 影视媒体
+                        li: a(href="http://sb.sensebrand.com.cn") 商标注册
+                .line
+                .menuset
+                    .settitle 三人行思整体介绍
+                    .clearfix
+                        li: a(href="../../index.html") 首页
+                        li: a(href="us.html") 我们
+                        li: a(href="works.html") 精彩作品
+                        li: a(href="service.html") 服务
+                        li: a(href="contact.html") 联系
+                        li: a(href="news.html") 新闻
+                        li: a(href="consumer.html") 客户
+                        l(class="disable"): a(href="javascript:void(0);") 开发中
+                        li(class="disable"): a(href="javascript:void(0);") 开发中
+
+
+        .header
+            .maxbox
+                .logo: img(src="../assets/imgs/header/logo.png")
+                .menubtn.clse
+                .right.bcontact
+                    ul.menu.s
+                        li(class="first")
+                            a(href="../../index.html") 首页
+                            .border
+                        li(class="active")
+                            a(href="#") 商标注册
+                            .border
+                        li(class="")
+                            a(href="../sort-page/sort-page.html") 商标分类
+                            .border
+                        li(class="")
+                            a(href="../specification/specification.html") 常见问题
+                            .border
+                        li(class="")
+                            a(href="package.html") 商标研究
+                            .border
+                        li(class="")
+                            a(href="movies.html") 更多服务
+                            .border
+                        .clearfix
+                    .contact.hasoprbtn
+                        .box
+                            img(src="../assets/imgs/header/phone.png")
+                            p +86-022
+                            p(class="big") 5868 5516
+                            ul.clearfix.oprbtnlist
+                                li.oprbtn.othermenu(onclick="showmoremenudialog();")
+                                    img(width="14" height="14" class="inject-svg" src="https://d33wubrfki0l68.cloudfront.net/3fdb188080543769512136b7a10acfc5218260a9/3fc1e/img/dotdotdot.svg")
+                                li.othermenu.oprbtn(onclick="showsearchdialog();")
+                                    img(width="14" height="14" class="inject-svg" src="https://d33wubrfki0l68.cloudfront.net/ef96b66a9477de58ee8e18d02f7eeeb64001cc7f/69c15/img/search.svg")
+
+
+        //通用头代码 begin
+        .overback
+        .overback
+        .dialogofcode.dialog.spaceInUp.magictime
+            .closebtn.hasborder(onclick="hidecodeidalog();")
+                img(src="../assets/imgs/header/close-x.svg")
+            .codebox
+                .codest
+                    .codeitem.active
+                        p 扫一扫查看信息
+                        img(src="../assets/imgs/header/zjinfo.jpg")
+                        p(class="big") 总监信息
+                    .codeitem
+                        p 扫一扫添加微信
+                        img(src="../assets/imgs/header/zjcode.jpg")
+                        p(class="big") 总监微信
+                    .codeitem
+                        p 扫一扫关注我们
+                        img(src="../assets/imgs/header/wxcode.jpg")
+                        p(class="big") 官方微信
+
+                .codeopr
+                    .item.prev
+                        img(src="../assets/imgs/header/prev.png")
+                    .item.next
+                        img(src="../assets/imgs/header/next.png")
+
+        .dialog.dialogofsearch.spaceInDown.magictime
+            .closebtn.hasborder(onclick=("hidesearchdialog();"))
+                img(src="../assets/imgs/header/close-x.svg")
+            input.dialogofsearch-input
+            .btn.enter 搜索
+        .dialog.dialogofmoremenu.spaceInDown.magictime
+            .closebtn.hasborder(onclick=("hidemoremenudialog();"))
+                img(src="../assets/imgs/header/close-x.svg")
+            ul
+                a(href="us.html"): li 我们
+                a(href="works.html"): li 精彩作品
+                a(href="service.html"): li 服务
+                a(href="contact.html"): li 联系
+                a(href="news.html"): li 新闻
+                a(href="customer.html"): li 客户
+                a(href="jianshang.html"): li 鉴赏
+        //通用头代码 end
+
+        block content
+
+        //通用底部代码 begin
+        .maxbox
+            .pfooter
+                a(href="../../index.html")
+                    img(src="../assets/imgs/footer/slogo.png" class="slogo")
+                .text
+                    p 品牌缔造者背后的缔造者
+                    .share
+                        .box
+                            a(href="javascript:;" class="icon pic_14" data-qrcode="assets/imgs/footer/wxcode.jpg" title="微信")
+                            a(href="javascript:;" class="icon pic_15" data-qrcode="assets/imgs/footer/wxcode.jpg" title="朋友圈")
+                            a(href="javascript:;" class="icon pic_16" data-txt="三人行思" title="微博")
+                            a(href="javascript:;" class="icon pic_17" data-txt="三人行思" title="QQ")
+                            a(href="javascript:;" class="icon pic_18" data-txt="三人行思" title="Facebook")
+                            a(href="javascript:;" class="icon pic_19" data-txt="三人行思" title="Twitter")
+                            a(href="javascript:;" class="icon pic_20" data-txt="三人行思" title="Google+")
+
+                .codeimg
+                    img(src="../assets/imgs/footer/wxcode.jpg")
+                    p 官方微信
+        .footer
+            .bar
+                .maxbox
+                    .logo
+                        img(src="../assets/imgs/footer/logo-white.png")
+                    .text
+                        p.big 以品牌设计为中心的网视整合机构
+                        p
+                            a(href="javascript:;") 品牌建立
+                            |&nbsp;&nbsp;
+                            a(href="javascript:;") 网络营销
+                            | &nbsp;&nbsp;
+                            a(href="javascript:;") 影视媒体
+                    .icon.shang.hovertobigger
+
+
+            .footercontent
+                .service-more
+                    .title
+                        p.font48 品牌缔造者背后的缔造者
+                        p.font18 了解一个更为全面的缔造者故事
+                    .itemset.maxbox
+                        a(href="javascript:;" target="_blank")
+                            .item.time1 核心团队
+                        a(href="javascript:;" target="_blank")
+                            .item.time1.o 荣誉奖项
+                        a(href="javascript:;" target="_blank")
+                            .item.time1 客户列表
+                        a(href="javascript:;" target="_blank")
+                            .item.time1 信#[span(style={width: '2em',height:'1px',display: 'inline-block'})]念
+                        a(href="javascript:;" target="_blank")
+                            .item.time1.o 服#[span(style={width: '2em',height:'1px',display: 'inline-block'})]务
+                        a(href="javascript:;" target="_blank")
+                            .item.time1 联#[span(style={width: '2em',height:'1px',display: 'inline-block'})]系
+                        .clearfix
+
+                .maxbox
+                    .siteinfo
+                        .item.i1
+                            .title
+                                p 专业领域
+                                a(href="javascript:;")
+                                    .more 更多+
+                            .left
+                                a(href="http://www.sensebrand.com.cn") 标志vi设计
+                                a(href="http://bz.sensebrand.com.cn") 包装设计
+                                a(href="http://hc.sensebrand.com.cn") 画册设计
+                            .right
+                                a(href="http://web.sensebrand.com.cn") 网站建设
+                                a(href="http://video.sensebrand.com.cn") 影视媒体
+                                a(href="http://sb.sensebrand.com.cn") 商标注册
+                            .clearfix
+                        .item.i2
+                            .title
+                                p 三人形思企划服务亮点
+                                    a(href="javascript:;")
+                                        .more 更多+
+                            p 零风险合作
+                                span.space 四大专业优势
+                                span.space 品牌+互联网
+                            p 22天快速创建品牌
+                            p 28天快速建立网络营销的核心
+
+                        .item.i3
+                            .title
+                                p 三人形思简述
+                                    a(href="javascript:;")
+                                        .more 更多+
+                            p 老船吧招商宣传片宁波市百世德餐饮管理有限公司旗下的餐饮连锁表中国出赛于英国伦敦举办的“百瑞斯塔国际咖啡师大赛锁表中国出赛于英国伦敦举办的“百。...
+
+                        .clearfix
+                    .codeset
+                        .codeitem
+                            img(src="../assets/imgs/footer/zjinfo.jpg")
+                            p 总监信息
+                        .codeitem.o
+                            img(src="../assets/imgs/footer/zjcode.jpg")
+                            p 总监微信
+                        .codeitem
+                            img(src="../assets/imgs/footer/wxcode.jpg")
+                            p 官方微信
+                    .clearfix
+
+                .line.ofouterlink
+                .maxbox.outerlink
+                    .title 友情链接&nbsp;:&nbsp;
+                       ul
+                           -
+                               var data = [
+                               {href: 'http://www.sense-bd.com', target: '_blank', text: '响应式网站'},
+                               {href: 'http://www.sense-bd.com', target: '_blank', text: '官方网站'},
+                               {href: 'http://www.sense-bd.com', target: '_blank', text: '标志设计'},
+                               {href: 'http://www.sense-bd.com', target: '_blank', text: '网站建设'},
+                               {href: 'http://www.sense-bd.com', target: '_blank', text: '标志设计'},
+                               ];
+                           - var n = 0;
+                               while n < 10
+                                    - n++
+                                    each val in data
+                                        li: a(href=val.href target=val.target) #{val.text}
+
+
+                .line
+                .maxbox.contactus
+                    p
+                        span.big 联系我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        |地址：天津市西青区宾水西道399号(天津市大学软件学院B区508)
+
+                    p.right 三人形思企业形象策划（天津）有限公司
+                .sider-bar
+                    .sb-top
+                        i.arrow
+                        |TOP
+                    #app.sb-ewm-app
+                        i.arrow
+                        .sb-w
+                        div(style={float: 'left'})
+                               img(src="../assets/imgs/footer/2wm.jpg")
+                               p(style={
+                               background: "white",
+                               "text-align": "center",
+                               color: "red",
+                               "line-height": "25px",
+                               width: "auto"
+                               }) 扫描二维码 信息随身看
+                        div(style={float: 'left'})
+                               img(src="../assets/imgs/footer/wxcode.jpg")
+                               p(style={
+                               background: "white",
+                               "text-align": "center",
+                               color: "red",
+                               "line-height": "25px",
+                               width: "auto"
+                               }) 扫描二维码 加微信关注
+                        i.arrow
+                    .sb-fx
+                        p 分享
+                        .sb-f
+                            .bdsharebuttonbox(style={
+                                width: '100px',
+                                'margin-top': '8px',
+                                'data-tag': 'share_1'
+                            })
+                                a.bds_qzone(data-cmd="qzone" href="#")
+                                a.bds_tsina(data-cmd="tsina")
+                                a.bds_weixin(data-cmd="weixin")
+                                a.bds_tqq(data-cmd="tqq")
+                    .sb-qq
+                        a(href="javascript:;" onclick="location.href='http://wpa.qq.com/msgrd?v=3&uin=253304135&site=qq&menu=yes'")
+                            i.arrow
+                            p QQ客服
+        //通用底部代码 end
+
+        .dialog.dialogofdetailinfo.slideRightRetourn.magictime
+            .innerbox
+                .inner
+                    .closebtn.hasborder(onclick="hidedetailinfodialog();")
+                        img(src="../assets/imgs/footer/close-x.svg")
+                    .info-logo
+                        img(src="../assets/imgs/footer/slogo.png")
+                    .info-name
+                    .info-desc
+
+        <!--[if lte IE 9]>
+        script(src="../assets/js/respond.min.js")
+        script(src="../assets/js/html5shiv.min.js")
+        <![endif]-->
+        script(src="../assets/lib/jquery/dist/jquery.min.js")
+        script(src="../assets/lib/bootstrap/dist/js/bootstrap.min.js")
+        <!--header-footer footer-->
+        script(src="../assets/js/header-footer/common.js")
+        script(src="../assets/js/header-footer/owl.carousel.min.js")
+        script(src="../assets/js/header-footer/wow.min.js")
+        script(src="../assets/js/header-footer/jquery.easing.1.3.js")
+        script(src="../assets/js/header-footer/raphael.js")
+        script(src="../assets/js/header-footer/banneralert.min.js" language="javascript")
+        script(type="text/javascript" src="../assets/js/header-footer/jquery.mousewheel.js")
+        script(src="../assets/js/header-footer/jquery.touchSwipe.min.js")
+
+        script.
+            if ($(window).width() <= 960) {
+                $(".homevideo #myVideo").remove();
+            }
+            var bannertimer;
+            var circletimer;
+            var mouses = true;//是否执行滚动
+            function mousefun() {
+                mouses = false
+                var s = setInterval(function () {
+                    mouses = true;
+                    clearInterval(s)
+                }, 1100)
+            }
+            function sethomebannersize() {
+                $(".home-banner .banneritem,.home-banner").height($(window).height() - $(".header").height());
+                $(".home-banner .banneritem .itemtxt .text").css("margin-top", function () {
+                    return 0 - $(this).height() / 2;
+                });
+                if ($(window).width() > 1280) {
+                    if ($(".home-service").height() < $(window).height()) {
+                        $(".home-service").addClass("height100");
+                        $(".home-service").css("height", function () {
+                            return $(window).height() - 60;
+                        })
+                    } else {
+                        $(".home-service").removeClass("height100");
+                    }
+                } else {
+                    $(".home-service").removeClass("height100");
+                }
+            }
+            //画圆
+            function drawcircle(obj) {
+                if (navigator.userAgent.indexOf("MSIE 8.0") > 0) {
+                    return;
+                }
+                obj.find(".text .text-date svg").remove();
+                animateEle(obj.find(".text .text-date"), 100)
+            }
+            function animateEle(objs, baifenbi) {
+                //var cwidth=$(".home-banner .banneritem.active .itemtxt .innerbox .text .text-date").width();
+                var cwidth = 80;
+                if ($(window).width() <= 480) {
+                    cwidth = 60;
+                }
+                objs.each(function () {
+                    $(this).svgCircle({
+                        parent: $(this)[0],
+                        w: cwidth,
+                        R: (cwidth - 3) / 2,
+                        sW: 3,
+                        color: ["#595857", "#595857"],
+                        perent: [cwidth - 6, baifenbi],
+                        speed: 5000,
+                        delay: 0
+                    })
+                })
+            }
+            function nextbanner() {
+                if (bannertimer == 0) {
+                    return;
+                }
+                var showobj = $(".home-banner .banneritem.active").next();
+                if (!showobj.html()) {
+                    clearInterval(bannertimer);
+                    bannertimer = 0;
+                    $("body,html").animate({"scrollTop": [$(window).height() - $(".header").height(), "easeInCubic"]}, 1000);
+                    return;
+                    //showobj=$(".home-banner .banneritem:first");
+                }
+                $(".home-banner .banneritem.active").removeClass("active");
+                showobj.addClass("active");
+                var marginvalue = 0 - $(".home-banner .banneritem.active").index() * $(".home-banner .banneritem").height();
+                $(".home-banner .banneritem.active .itemtxt .text").hide();
+                $(".home-banner .bannerset").animate({
+                    "margin-top": [marginvalue, "easeInCubic"]
+                }, 1000, function () {
+                    $(".home-banner .banneritem.active .itemtxt .text").removeClass("slideUpRetourn slideDownRetourn magictime").addClass("slideUpRetourn magictime").show();
+                });
+                drawcircle($(".home-banner .banneritem.active"));
+
+            }
+            function prevbanner() {
+                if (bannertimer == 0) {
+                    return;
+                }
+                var showobj = $(".home-banner .banneritem.active").prev();
+                if (!showobj.html()) {
+                    clearInterval(bannertimer);
+                    bannertimer = 0;
+                    return;
+                    //showobj=$(".home-banner .banneritem:last");
+                }
+                $(".home-banner .banneritem.active").removeClass("active");
+                showobj.addClass("active");
+                var marginvalue = 0 - $(".home-banner .banneritem.active").index() * $(".home-banner .banneritem").height();
+                $(".home-banner .banneritem.active .itemtxt .text").hide();
+                $(".home-banner .bannerset").animate({
+                    "margin-top": [marginvalue, "easeInCubic"]
+                }, 1000, function () {
+                    $(".home-banner .banneritem.active .itemtxt .text").removeClass("slideUpRetourn slideDownRetourn magictime").addClass("slideDownRetourn magictime").show();
+                });
+                drawcircle($(".home-banner .banneritem.active"));
+            }
+            function tonextbanner() {
+                clearInterval(bannertimer);
+                if ($(".home-banner .banneritem.active").index() != $(".home-banner .banneritem").size() - 1) {
+                    nextbanner();
+                    bannertimer = setInterval(function () {
+                        nextbanner();
+                    }, 5000);
+                } else {
+                    // $("body,html").animate({ "scrollTop": [$(".home-service").offset().top-$(".header-footer").height()-parseInt($(".home-service .contentitem .btitle").css("margin-top")),"easeInCubic"]},1000);
+                    $("body,html").animate({"scrollTop": [$(window).height() - $(".header").height(), "easeInCubic"]}, 1000);
+                }
+            }
+            function toprevbanner() {
+                clearInterval(bannertimer);
+                if ($(".home-banner .banneritem.active").index() != 0) {
+                    prevbanner();
+                    bannertimer = setInterval(function () {
+                        prevbanner();
+                    }, 5000);
+
+                } else {
+                    $("body").showbanner({
+                        content: "已经是第一个啦"
+                    });
+                }
+            }
+            $(document).ready(function () {
+
+                $(".header ul.menu li:eq(7)").addClass("active");
+                sethomebannersize();
+
+                $(".home-banner .welcome .more").click(function () {
+                    if (!(/msie [6|7|8]/i.test(navigator.userAgent))) {
+                        $(".home-banner .welcome").addClass("magictime slideUp");
+                    } else {
+                        $(".home-banner .welcome").slideUp();
+
+                    }
+                    drawcircle($(".home-banner .banneritem.active"));
+                    bannertimer = setInterval(function () {
+                        nextbanner();
+                    }, 5000);
+                })
+                $(".home-banner").swipe(
+                    {
+                        swipe: function (event, direction, distance, duration, fingerCount) {
+
+                            if (direction == "up") {
+                                if ($(".home-banner .welcome").is(":hidden") || $(".home-banner .welcome").hasClass("slideUp")) {
+                                    tonextbanner();
+                                } else {
+                                    $(".home-banner .welcome .more").click();
+                                }
+
+                            } else if (direction == "down") {
+                                toprevbanner();
+                            }
+                        }
+                    }
+                );
+
+                $(window).resize(function () {
+                    sethomebannersize();
+                });
+                $(".home-banner .oprbox .item.prev").click(function () {
+                    toprevbanner();
+                });
+                $(".home-banner .oprbox .item.next").click(function () {
+                    tonextbanner();
+                });
+                $(".home-banner").mousewheel(function (event, delta, deltaX, deltaY) {
+                    //var fromobj=$(event.srcElement);
+                    //if(fromobj.parents(".home-banner").html()){
+                    if (delta < 0) {//向下
+                        if (mouses) {
+                            mouses = false;
+                            mousefun();
+                            if ($(".home-banner .welcome").is(":hidden") || $(".home-banner .welcome").hasClass("slideUp")) {
+                                tonextbanner();
+                            } else {
+
+                                $(".home-banner .welcome .more").click();
+                            }
+
+                        }
+
+                    } else if (delta > 0) {//向上
+                        if (mouses) {
+                            mouses = false;
+                            mousefun();
+                            if ($(".home-banner .welcome").is(":hidden") || $(".home-banner .welcome").hasClass("slideUp")) {
+                                if ($(document).scrollTop() > 0) {
+                                    $("html,body").animate({scrollTop: 0}, 500);
+                                } else {
+                                    toprevbanner();
+                                }
+                            }
+
+
+                        }
+                    }
+                    return false;
+                    //}
+
+
+                });
+                // if($(window).width()>1280){
+                // 	$(".home-service").mousewheel(function (event, delta, deltaX, deltaY) {
+                // 		if(delta<0){
+                // 			$("body,html").animate({ "scrollTop": [$(window).height()-$(".header-footer").height()+$(".home-service").height()-60,"easeInCubic"]},1000);
+                // 			return false;
+                // 		}
+                // 	});
+
+                // }
+                $('.consumerset').owlCarousel({
+                    items: 8,
+                    autoWidth: true,
+                    loop: true,
+                    navigation: true,
+                    navigationText: ["", ""],
+                    autoPlay: 3000,
+                    stopOnHover: true,
+                    pagination: false,
+                    responsive: true,
+                    lazyLoad: true,
+                    addClassActive: true,
+                    itemsDesktop: [1366, 6],
+                    itemsDesktopSmall: [1024, 5],
+                    itemsTablet: [800, 4],
+                    itemsTabletSmall: [550, 3],
+                    itemsMobile: [400, 3],
+
+                });
+                $('.home-service .contentitem .tipset ul').owlCarousel({
+                    items: 1,
+                    autoWidth: true,
+                    loop: true,
+                    navigation: false,
+                    navigationText: ["", ""],
+                    autoPlay: 5000,
+                    stopOnHover: true,
+                    pagination: false,
+                    responsive: true,
+                    singleItem: true,
+                    mouseDrag: false,
+                    touchDrag: false,
+                    paginationSpeed: 0,
+                    rewindSpeed: 0,
+                    addClassActive: true
+                });
+
+                if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))) {
+                    var wow = new WOW({
+                        boxClass: 'caseitem',
+                        animateClass: 'magictime',
+                        offset: 0,
+                        mobile: false,
+                        live: true
+                    });
+                    wow.init();
+                }
+
+            });
+        script.
+            function showdetailinfodialog() {
+                $(".dialog").hide();
+                $(".overback").show();
+                $(".dialogofdetailinfo").find(".info-name").html('怎样进行网站建设');
+                $(".dialogofdetailinfo").find(".info-desc").html('<p style="text-indent:2em"><span style="font-family:微软雅黑,&quot;microsoft yahei&quot;font-size:14px">可以说网站设计行业是近十年业发展最快的一个行业，我们的生活在互联网的不断发展下，也变得更加的方便和快捷。对于怎样进行网站设计建设的要求就必须将网站的整体设计与网页设计的相关原理紧密结合起来。</span></p><p style="text-indent:2em"><a href="http://www.sense-bd.com/" target="_blank"><span style="font-family:微软雅黑,&quot;microsoft yahei&quot;font-size:14px">怎样进行网站建设</span></a><span style="font-family:微软雅黑,&quot;microsoft yahei&quot;font-size:14px">就必须要针对不同企业和不同受众群体给出新颖独特的设计方案，基于方便快捷的用户操作体验突出企业的运营模式和文化内涵。为此，在进行网站设计时需要明确企业网站建设目的，结合企业的定位，诊断网站现状和行业市场竞争表现，对企业受众进行用户研究和分析，确定网站的定位策略，从而能够更好的服务于企业。</span></p><p style="text-indent:2em"><span style="font-family:微软雅黑,&quot;microsoft yahei&quot;font-size:14px">网站建设的独特风格要建立在有价值的内容之上。视觉搭配要合理不需要太多错综复杂的色彩，通过视觉体验来统一企业形象。网站内容必须按照网站的目的来选择且不能有内容越多越好的思想。应该有所侧重，与网站主题的内容选择相对多一点。</span></p><p style="text-indent:2em"><span style="font-family:微软雅黑,&quot;microsoft yahei&quot;font-size:14px">对于网站建设应该重视网页设计的规范性，企业网页设计一定要符合其行业的发展规则，在进行企业网页设计的过程当中，要求网页设计的风格具有多样化，但是，无论哪种风格的网站，都需要有个统一的核心。在追求视觉效果的同时，要注意所用元素是否规范，是否符合网站的主题。</span></p><p style="text-indent:2em"><span style="font-family:微软雅黑,&quot;microsoft yahei&quot;font-size:14px">怎样进行网站建设对于企业网站的来说还是要主张内容建设，网站的表达方式还是要通过网站内容来表达，所以，在进行企业网站设计的时候，一定还要对网站内容更多的精细化筛选，让企业网站的内容更加贴近市场和用户，以此来获得最好的关注度。</span></p><p style="text-align:center"><img src="http://upload.sensegroup.com.cn/sense/20160815/92621471252248464.jpg" title="20.jpg"></p>');
+
+                $(".dialogofdetailinfo").fadeIn();
+
+            }
