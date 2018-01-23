@@ -3,10 +3,6 @@
 /*color*/
 $mainColor: #2ea7e0;
 /*mixin*/
-@mixin paddingSmall($value: 2px) {
-  padding-right: $value;
-  padding-left: $value;
-}
 
 
 /*global*/
@@ -71,10 +67,15 @@ $mainColor: #2ea7e0;
     padding-left: 5px;
     padding-right: 5px;
   }
+  .entry {
+    @include maxWidth();
+
+  }
   .module {
     border: 1px solid #b5b5b6;
     margin-bottom: 10px;
     cursor: pointer;
+    overflow: hidden;
     h5 {
       position: relative;
     }
