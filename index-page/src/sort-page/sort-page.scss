@@ -1,0 +1,225 @@
+@import "../common/sass/common-function";
+@import "../common/sass/common-structure";
+
+@import "sort-page-font.css";
+
+/*color*/
+$mainColor: #2ea7e0;
+
+/*global*/
+a {
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+  &.active {
+    color: $mainColor;
+  }
+  &.active .btn {
+    color: $mainColor;
+  }
+}
+.sort-page .btn {
+  width: 192px;
+  height: 53px;
+}
+
+.tab-button-group {
+
+  padding: 20px;
+  span {
+    cursor: pointer;
+  }
+}
+
+.tab-content {
+  .first-sort-page {
+    button {
+      width: 100%;
+      padding: 0;
+      & a {
+        display: block;
+        padding: 6px 0;
+      }
+
+    }
+
+    .module {
+      padding: 35px 0;
+      border-top: 1px solid #dddddd;
+      overflow: hidden;
+      @include maxWidth();
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+      &:last-child {
+        border-bottom: 1px solid #dddddd;
+      }
+      h5 {
+        background: $mainColor;
+        padding: 42px 0;
+        margin: 4px 0 10px 0;
+        color: white;
+        &:hover {
+          background: darken($mainColor, 30%);
+        }
+      }
+    }
+
+  }
+
+  .first-col {
+    .download-btn {
+      padding: 10px 0;
+      .btn {
+        &:hover {
+          background: $mainColor;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .second-col {
+    .row {
+      margin-bottom: 10px;
+
+      .btn {
+        width: 100%;
+        margin-bottom: 5px;
+
+      }
+      .col-sm-6 {
+        @include paddingSmall();
+      }
+    }
+  }
+
+  .third-col-hr {
+    margin: 5px 0 10px 0;
+    background: $mainColor;
+    height: 1px;
+  }
+  .third-col {
+    @include paddingSmall(0);
+  }
+  .third-col-title {
+    color: $mainColor;
+  }
+  .third-col-body {
+    &  span {
+      display: inline-block;
+      margin-right: 9px;
+      margin-bottom: 15px;
+      &:hover{
+        color: $mainColor;
+      }
+    }
+  }
+  .third-col-footer {
+    .col-md-5 {
+      padding-right: 2px;
+    }
+    button {
+      &:hover {
+        background: $mainColor;
+      }
+      &:hover  a {
+        color: white;
+      }
+
+    }
+  }
+
+}
+
+
+.second-sort-page {
+
+  h5 {
+    padding: 15px 25px 0 50px;
+
+  }
+  p {
+    padding: 0 25px 0 50px;
+
+  }
+  button {
+    background: #efefef;
+    color: $mainColor;
+  }
+
+  .right-line-box {
+    padding-left: 50px;
+    overflow: hidden;
+  }
+  .right-line {
+    height: 1px ;
+    background: $mainColor;
+    margin: 10px 0;
+  }
+
+  .col-md-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .entry {
+    @include maxWidth();
+
+  }
+  .module {
+    border: 1px solid #b5b5b6;
+    margin-bottom: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    h5 {
+      position: relative;
+    }
+    img {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+    }
+    &:hover {
+      background: $mainColor;
+      color: white;
+      .right-line {
+        background: white;
+      }
+    }
+  }
+
+  .download-btn {
+    padding: 0 0 20px 50px;
+
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-2 {
+    width: 15.666667%;
+  }
+  .col-md-offset-1 {
+    margin-left: 2.333333%;
+  }
+  .col-md-10 {
+    width: 95.33333333%
+  }
+  .first-col {
+    @include paddingSmall(0);
+  }
+  .second-col {
+    width: 42.333333%;
+  }
+  .third-col.col-md-4 {
+    width: 34.333333%;
+  }
+  .first-sort-page .tab-content {
+    .col-md-offset-1 {
+      margin-left: 5.333333%;
+    }
+  }
+
+}

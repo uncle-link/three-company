@@ -1,0 +1,394 @@
+@import "../common/sass/common-function";
+@import "../common/sass/common-structure";
+
+@import "brand-registry.font";
+
+$hoverColorPercent: 20%;
+
+
+/*global*/
+.index-page .entry {
+  @include maxWidth();
+}
+
+/*private*/
+
+.subtitle {
+  padding: 15px 0;
+}
+.brand-title, .content-title, .registry-risk-title, .common-problem-title, .function-title {
+  margin-top: 65px;
+}
+
+.brand .module{
+  transition: .3s;
+}
+.brand .module:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.middle-hr {
+  height: 3px;
+  background: black;
+  width: 70px;
+  margin: 22px auto;
+  margin-top: 2px;
+}
+
+.brand .modules, .content .modules:first-child {
+  margin-top: 25px;
+}
+.brand .module, .content .module{
+  height: 300px;
+  background: red;
+  color: white;
+  position: relative;
+  text-align: center;
+  display: table;
+}
+
+.brand .module small, .content .module div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.content .text-left .module div {
+  padding: 0 30px;
+  text-align: left;
+}
+.content .text-center .module div {
+  padding: 0;
+  text-align: center;
+}
+
+.content {
+
+  .module {
+    height: 300px;
+    background: greenyellow;
+    color: white;
+  }
+
+
+  .text-left {
+    .module {
+      &:first-child{
+        background: #00a29a;
+        &:hover {
+          background: darken(#00a29a,$hoverColorPercent);
+        }
+      }
+      &:first-child + .module {
+        background: #2ea7e0;
+        &:hover {
+          background: darken(#2ea7e0, $hoverColorPercent);
+        }
+      }
+      &:first-child + .module + .module {
+        background: #172a88;
+        &:hover {
+          background: darken(#172a88, $hoverColorPercent);
+        }
+      }
+    }
+  }
+
+  .text-center {
+    .module {
+      &:first-child:hover {
+        background: darken(#8fc31f, $hoverColorPercent);
+      }
+      &:first-child + .module:hover {
+        background: darken(#00913a, $hoverColorPercent);
+      }
+      &:first-child + .module + .module:hover {
+        background: darken(#00a29a, $hoverColorPercent);
+      }
+      &:first-child + .module + .module + .module:hover {
+        background: darken(#036eb8, $hoverColorPercent);
+      }
+      &:first-child + .module + .module + .module + .module:hover {
+        background: darken(#036eb8, $hoverColorPercent);
+      }
+    }
+  }
+
+
+}
+
+.content .text-center .module:first-child,.brand .module:first-child {
+  background: #8fc31f;
+}
+.content .text-center .module:first-child + .module, .brand .module:first-child + .module {
+  background: #00913a;
+}
+.content .text-center .module:first-child + .module + .module,.brand .module:first-child + .module + .module{
+  background: #00a29a;
+}
+.content .text-center .module:first-child + .module + .module + .module,.brand .module:first-child + .module + .module + .module  {
+  background: #036eb8;
+}
+
+.content .text-center .module:first-child + .module + .module + .module + .module,.brand .module:first-child + .module + .module + .module + .module {
+  background: #171c61;
+}
+
+
+.meal-first-hr {
+  width: 70px;
+  height: 2px;
+  background: aqua;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.meal-second-hr {
+  background: #eee;
+  height: 2px;
+  position: relative;
+  margin: 20px 0;
+}
+
+.meal-second-hr-inner {
+  display: inline-block;
+  position: absolute;
+  background: aqua;
+  height: 2px;
+  width: 176px;
+  left: 50%;
+  margin-left: -88px;
+}
+
+
+.tab-content {
+  background: #eee;
+}
+.tab-list-title {
+  margin-top: 10px;
+}
+.tab-list-title + p {
+  margin-bottom: 20px;
+}
+.meal .btn, .tab-content .btn {
+  margin: 6px 4px;
+}
+
+.tab-content .btn-active {
+  color: #2ea7e0;
+  border-color: #2ea7e0;
+}
+.tab-content .left-panel {
+  border-right: 3px solid white;
+}
+.tab-content .btn {
+  width: 100%;
+}
+.meal {
+  margin-top: 160px;
+}
+.meal-button-group a:hover {
+  text-decoration: none;
+}
+.meal-button-group .btn-active {
+  color: #2ea7e0;
+  border-color: #2ea7e0;
+}
+
+.meal-download {
+  margin: 31px 0 50px 0;
+}
+
+.shop-registry-modules img {
+  width: 100px;
+}
+
+.shop-registry {
+  background: url("../assets/imgs/goods-registry.jpg") no-repeat  ;
+  background-size:
+          cover;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../assets/imgs/goods-registry.jpg',sizingMethod='scale');
+
+
+  background-size: 100% 100%;
+  padding: 45px 0 90px 0;
+}
+.shop-registry hr {
+  width: 70px;
+  background: white;
+  height: 2px;
+  margin: 52px auto;
+  margin-top: 8px;
+}
+.shop-registry-modules .shop-registry-module {
+  background: #f1f1f1 ;
+  padding: 30px 30px 0;
+  margin-bottom: 10px;
+  height: 273px;
+  cursor: pointer;
+}
+.shop-registry-modules .shop-registry-module:hover {
+  color: #ea5537;
+}
+.shop-registry-hint {
+  margin-top: 36px;
+}
+.shop-registry-title, .shop-registry-hint {
+  color: white;
+}
+
+.registry-risk-module-title {
+  margin-bottom: 40px;
+}
+.registry-risk-modules h6 {
+  line-height: 39px;
+}
+.registry-risk-modules .col-md-4 {
+  padding: 50px 26px 0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  height: 420px;
+  -moz-transition:  .3s;
+  -ms-transition: .3s;
+  transition: .3s;
+}
+.registry-risk-modules .col-md-4:hover {
+  background: #2ea7e0;
+  color: white;
+}
+
+.common-problem-modules {
+  margin-top: 60px;
+}
+
+.common-problem-modules .first-list {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.common-problem-modules .first-list ul{
+  margin-top: 20px;
+  padding-left: 10px;
+}
+.common-problem-modules .first-list li {
+  margin-top: 3px;
+  line-height: 38px;
+  list-style: disc;
+}
+.common-problem-modules a:hover {
+  text-decoration: none;
+}
+.common-problem-modules .right-gt {
+  float: right;
+}
+.common-problem-modules .list-group-item {
+  border-left: none;
+  border-right: none;
+  padding: 20px 15px;
+}
+
+.function-modules {
+  margin-top: 34px;
+}
+.function-modules .col-md-2{
+  background: red;
+  padding: 32px 25px 0;
+  color: white;
+  height: 217px;
+  -moz-transition:  .3s;
+  -ms-transition: .3s;
+  transition: .3s;
+}
+.function-modules .col-md-2:hover {
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  z-index: 1;
+}
+.function-modules img {
+  height: 30px;
+}
+.function-modules h5 {
+  margin-top: 30px;
+}
+.function {
+  padding-bottom: 20px;
+}
+.function-modules .col-md-2:first-child + .col-md-2 {
+  background: #f5b229;
+}
+
+.function-modules .col-md-2:first-child + .col-md-2 + .col-md-2 {
+  background: #eb5c2e;
+}
+
+.function-modules .col-md-2:first-child + .col-md-2 + .col-md-2 + .col-md-2 {
+  background: #1ba65b;
+}
+.function-modules .col-md-2:first-child + .col-md-2 + .col-md-2 + .col-md-2 + .col-md-2 {
+  background: #1d70b9;
+}
+.function-modules .col-md-2:first-child + .col-md-2 + .col-md-2 + .col-md-2 + .col-md-2 + .col-md-2{
+  background: #542b8c;
+}
+
+
+
+@media (min-width: 992px) {
+  .col-md-offset-1 {
+    margin-left: 2.333333%;
+  }
+  .col-md-1 {
+    width: 2.333333%;
+  }
+  .col-md-2 {
+    width: 19.066667%;
+  }
+  .col-md-10 {
+    width: 95.333333%;
+  }
+  .function-modules .col-md-2 {
+    width: 16.66666667%;
+  }
+  .shop-registry-modules .col-md-offset-1{
+    margin-left: 1.333333%;
+  }
+  .shop-registry-modules .col-md-10{
+    width: 97.333333%;
+  }
+
+  .index-page .btn{
+    padding: 13px 25px;
+    margin-bottom: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .tab-content .left-panel, .tab-content .right-panel {
+    padding: 30px 100px 45px;
+  }
+
+  .content, .brand {
+    .entry {
+      .col-md-2 {
+        width: 20%;
+      }
+    }
+  }
+}
+@media(max-width: 991px) {
+  .common-problem {
+    text-align: center;
+  }
+  .brand  {
+    .module {
+      height: 185px;
+    }
+  }
+
+  .content .text-left .module div {
+    padding: 0;
+  }
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+  .registry-risk-modules div.col-md-4 {
+    height: 500px;
+  }
+}

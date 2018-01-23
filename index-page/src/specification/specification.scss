@@ -1,0 +1,78 @@
+@import "../common/sass/common-function";
+@import "../common/sass/common-structure";
+
+@import "specification-font";
+/*color*/
+$mainColor: #2ea7e0;
+/*global*/
+@media (min-width: 992px) {
+  .col-md-offset-1 {
+    margin-left: 1.333333%;
+  }
+  .col-md-1 {
+    width: 2.333333%;
+  }
+  .col-md-2 {
+    width: 19.066667%;
+  }
+  .col-md-10 {
+    width: 97.333333%;
+  }
+  .first-col {
+    .list-group {
+      text-align: left;
+    }
+
+  }
+}
+
+a {
+  color: black;
+  &:hover {
+    text-decoration: none;
+  }
+  &.active {
+    color: $mainColor;
+  }
+  &.active .btn {
+    color: $mainColor;
+  }
+}
+
+.main {
+  @include maxWidth();
+  .col-md-4, col-md-8 {
+    @include paddingSmall(0);
+  }
+}
+
+
+.first-col,.second-col {
+  border-top: 1px solid #3f3b3a;
+  margin-top: 40px;
+  padding-top: 10px;
+}
+.first-col {
+  .list-group-item {
+    border: none;
+  }
+}
+
+.second-col {
+  li {
+    padding: 53px 0;
+    border-top: 1px dashed #aaa;
+    &:first-child {
+      border-top: 1px solid #3f3b3a;
+    }
+  }
+}
+.second-col-title {
+  padding: 14px 0;
+}
+.list-title {
+  margin: 8px 0;
+}
+.list-body{
+  line-height: 38px;
+}
