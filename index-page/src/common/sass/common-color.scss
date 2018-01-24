@@ -4,6 +4,8 @@ $titleColor: #3F3B3A;
 $secondTitleColor: #5A5858;
 $articleColor: #595857;
 
+$whiteColor: #fff;
+$blackColor: #000;
 
 
 .body-color {
@@ -24,6 +26,14 @@ $articleColor: #595857;
 
 .article-color {
   color: $articleColor;
+}
+
+.white-color {
+  color: $whiteColor;
+}
+
+.black-color {
+  color: $blackColor;
 }
 
 body {

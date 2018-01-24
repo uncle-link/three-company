@@ -7,8 +7,16 @@ a:hover, .btn.btn-link:hover {
 a:active, .btn.btn-link:active {
   text-decoration: none; }
 
+.common-hr {
+  background: #aeb0b3;
+  height: 2px;
+  margin: 25px auto; }
+
 div, button, h1, h2, h3, h4, h5, h6, span, .btn {
   font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif, Verdana; }
+
+.large-1-h {
+  font-size: 44px; }
 
 .b-big-1-h {
   font-size: 41px; }
@@ -46,7 +54,10 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 .small-f {
   font-size: 12px; }
 
-@media (max-width: 991px) {
+@media (max-width: 991px) and (min-width: 567px) {
+  .large-1-h {
+    font-size: 41px; }
+
   .b-big-1-h {
     font-size: 36px; }
 
@@ -82,6 +93,45 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 
   .small-f {
     font-size: 10px; } }
+@media (max-width: 566px) {
+  .large-1-h {
+    font-size: 37px; }
+
+  .b-big-1-h {
+    font-size: 32px; }
+
+  .big-1-h, .first-sort-page .first-col h5 {
+    font-size: 28px; }
+
+  .one-h {
+    font-size: 26px; }
+
+  .small-1-h {
+    font-size: 22px; }
+
+  .two-h {
+    font-size: 20px; }
+
+  .three-h {
+    font-size: 17px; }
+
+  .four-h, .first-sort-page .second-col strong {
+    font-size: 16px; }
+
+  .small-4-h {
+    font-size: 18px; }
+
+  .five-h, .tab-button-group a, .first-sort-page .first-col .btn, .third-col-footer, .second-sort-page .module h5, .second-sort-page .module p, .second-sort-page .module .btn {
+    font-size: 16px; }
+
+  .six-h, .first-sort-page .second-col .btn, .third-col-title, .third-col-body {
+    font-size: 14px; }
+
+  .normal-f, .first-sort-page .second-col small {
+    font-size: 12px; }
+
+  .small-f {
+    font-size: 10px; } }
 .body-color, body {
   color: #5a5a5a; }
 
@@ -96,6 +146,12 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 
 .article-color {
   color: #595857; }
+
+.white-color {
+  color: #fff; }
+
+.black-color {
+  color: #000; }
 
 /*color*/
 /*global*/
@@ -190,8 +246,6 @@ a.active .btn {
   margin-bottom: 15px; }
   .tab-content .third-col-body span:hover {
     color: #2ea7e0; }
-.tab-content .third-col-footer .col-md-5 {
-  padding-right: 2px; }
 .tab-content .third-col-footer button:hover {
   background: #2ea7e0; }
 .tab-content .third-col-footer button:hover a {

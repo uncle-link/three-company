@@ -30,16 +30,16 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 .small-1-h {
   font-size: 30px; }
 
-.two-h, .main .second-col .second-col-title {
+.two-h {
   font-size: 26px; }
 
-.three-h, .main .list-title {
+.three-h {
   font-size: 24px; }
 
 .four-h {
   font-size: 21px; }
 
-.small-4-h, .main .first-col .list-group-item, .main .list-body {
+.small-4-h {
   font-size: 20px; }
 
 .five-h {
@@ -70,16 +70,16 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
   .small-1-h {
     font-size: 26px; }
 
-  .two-h, .main .second-col .second-col-title {
+  .two-h {
     font-size: 24px; }
 
-  .three-h, .main .list-title {
+  .three-h {
     font-size: 21px; }
 
   .four-h {
     font-size: 20px; }
 
-  .small-4-h, .main .first-col .list-group-item, .main .list-body {
+  .small-4-h {
     font-size: 18px; }
 
   .five-h {
@@ -109,16 +109,16 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
   .small-1-h {
     font-size: 22px; }
 
-  .two-h, .main .second-col .second-col-title {
+  .two-h {
     font-size: 20px; }
 
-  .three-h, .main .list-title {
+  .three-h {
     font-size: 17px; }
 
   .four-h {
     font-size: 16px; }
 
-  .small-4-h, .main .first-col .list-group-item, .main .list-body {
+  .small-4-h {
     font-size: 18px; }
 
   .five-h {
@@ -132,13 +132,19 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 
   .small-f {
     font-size: 10px; } }
+.brand-source {
+  line-height: 40px; }
+
+.large-1-h {
+  line-height: normal; }
+
 .body-color, body {
   color: #5a5a5a; }
 
 .common-color, a {
   color: #727171; }
 
-.title-color, .first-col {
+.title-color {
   color: #3F3B3A; }
 
 .second-title-color {
@@ -153,68 +159,55 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 .black-color {
   color: #000; }
 
-/*color*/
-/*global*/
-@media (min-width: 992px) {
-  .col-md-offset-1 {
-    margin-left: 1.333333%; }
+.section-one {
+  background: #f00; }
 
-  .col-md-1 {
-    width: 2.333333%; }
+.section-three {
+  background: url("../assets/imgs/brand-source/back.png") no-repeat;
+  background-size: 100% 100%; }
+  .section-three .headline {
+    background: #818385; }
 
-  .col-md-2 {
-    width: 19.066667%; }
+.large-1-h {
+  margin: 50px auto;
+  line-height: normal; }
 
-  .col-md-10 {
-    width: 97.333333%; }
+.section-one {
+  padding: 50px 9% 0;
+  height: 265px;
+  margin-bottom: 28px;
+  line-height: normal; }
+  .section-one img {
+    position: relative;
+    top: 17px; }
 
-  .first-col .list-group {
-    text-align: left; } }
-a.active {
-  color: #2ea7e0; }
-a.active .btn {
-  color: #2ea7e0; }
+.section-two {
+  margin-top: 28px; }
+  .section-two .package {
+    margin-top: 100px; }
+  .section-two .img-responsive {
+    margin: 0 auto;
+    position: relative;
+    top: 18px; }
 
-.main {
-  display: block;
-  margin: 0 auto;
-  max-width: 1700px;
-  width: 95%; }
-  .main .col-md-4, .main .col-md-8 {
-    padding-right: 0;
-    padding-left: 0; }
-    @media (min-width: 992px) {
-      .main .col-md-4:first-child, .main .col-md-8:first-child {
-        padding-left: 0; }
-      .main .col-md-4:last-child, .main .col-md-8:last-child {
-        padding-right: 0; } }
-    @media (max-width: 991px) {
-      .main .col-md-4:nth-of-type(2n), .main .col-md-8:nth-of-type(2n) {
-        padding-right: 0; }
-      .main .col-md-4:nth-of-type(2n + 1), .main .col-md-8:nth-of-type(2n + 1) {
-        padding-left: 0; } }
+.section-three {
+  padding: 10% 9% 100px; }
+  .section-three .headline {
+    display: table;
+    margin: 0 auto 40px;
+    height: 146px;
+    width: 146px; }
+    .section-three .headline div {
+      display: table-cell;
+      vertical-align: middle; }
 
-.first-col, .second-col {
-  border-top: 1px solid #3f3b3a;
-  margin-top: 40px;
-  padding-top: 10px; }
+.package {
+  margin-top: 40px; }
+  .package .package-body {
+    margin-bottom: 60px; }
+    .package .package-body .six-h {
+      margin: 0 0 30px; }
+  .package .package-footer img {
+    width: 100%; }
 
-.first-col .list-group-item {
-  border: none; }
-
-.second-col li {
-  padding: 53px 0;
-  border-top: 1px dashed #aaa; }
-  .second-col li:first-child {
-    border-top: 1px solid #3f3b3a; }
-
-.second-col-title {
-  padding: 14px 0; }
-
-.list-title {
-  margin: 8px 0; }
-
-.list-body {
-  line-height: 38px; }
-
-/*# sourceMappingURL=specification.css.map */
+/*# sourceMappingURL=brand-source.css.map */

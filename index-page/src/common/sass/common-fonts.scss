@@ -1,5 +1,7 @@
 $big1h: 36px;
 $bbig1h: 41px;
+$large1h: 44px;
+
 $oneh: 32px;
 $small1h: 30px;
 $twoh: 26px;
@@ -14,6 +16,12 @@ $smallf: 12px;
 
 div,button, h1, h2, h3, h4, h5, h6, span,.btn {
   font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif, Verdana;
+}
+
+.large-1-h {
+  font: {
+    size: $large1h;
+  }
 }
 
 .b-big-1-h {
@@ -55,7 +63,12 @@ div,button, h1, h2, h3, h4, h5, h6, span,.btn {
 .small-f {
   font-size: $smallf;
 }
-@media(max-width: 991px) {
+@media(max-width: 991px) and (min-width: 567px) {
+  .large-1-h {
+    font: {
+      size: $bbig1h;
+    }
+  }
   .b-big-1-h {
     font-size: $big1h;
   }
@@ -94,5 +107,52 @@ div,button, h1, h2, h3, h4, h5, h6, span,.btn {
   }
   .small-f {
     font-size:  10px;
+  }
+}
+
+$slotValue: 4px;
+@media(max-width: 566px) {
+  .large-1-h {
+    font: {
+      size: $bbig1h - $slotValue;
+    }
+  }
+  .b-big-1-h {
+    font-size: $big1h - $slotValue;
+  }
+  .big-1-h {
+    font-size: $oneh - $slotValue;
+  }
+  .one-h {
+    font: {
+      size: $small1h - $slotValue;
+    }
+  }
+  .small-1-h {
+    font-size: $twoh - $slotValue;
+  }
+  .two-h {
+    font-size: $threeh - $slotValue;
+  }
+  .three-h {
+    font-size: $fourh - $slotValue;
+  }
+  .four-h {
+    font-size: $small4h - $slotValue;
+  }
+  .small-4-h {
+    font-size: $fiveh ;
+  }
+  .five-h {
+    font-size: $sixh ;
+  }
+  .six-h {
+    font-size: $normalf ;
+  }
+  .normal-f {
+    font-size: $smallf ;
+  }
+  .small-f {
+    font-size:  10px ;
   }
 }

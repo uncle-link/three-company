@@ -1,0 +1,75 @@
+@import "../common/sass/common-function";
+@import "../common/sass/common-structure";
+
+
+@import "brand-source.font";
+@import "brand-source.color";
+
+.large-1-h {
+  margin: 50px auto;
+  line-height: normal;
+}
+
+.section-one {
+  padding: 50px 9% 0;
+  height: 265px;
+  margin-bottom: 28px;
+  line-height: normal;
+  img {
+    position: relative;
+    top: 17px;
+  }
+}
+
+.section-two {
+  margin-top: 28px;
+  .package {
+    margin-top: 100px;
+  }
+
+  .img-responsive {
+    margin: 0 auto;
+    position: relative;
+    top: 18px;
+  }
+}
+
+.section-three {
+  padding: 10% 9% 100px;
+  .headline {
+    @include verticalContainer;
+    margin: 0 auto 40px;
+    height: 146px;
+    width: 146px;
+    div {
+      @include verticalCell;
+    }
+  }
+}
+
+.package {
+  margin-top: 40px;
+
+  .package-body {
+    margin-bottom: 60px;
+    .six-h {
+      margin: 0 0 30px;
+    }
+  }
+
+  .package-footer {
+
+    img {
+      width: 100%;
+    }
+
+  }
+}
+
+
+
+
+
+
+
+
