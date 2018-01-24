@@ -135,7 +135,7 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 .brand-source {
   line-height: 40px; }
 
-.large-1-h {
+.large-1-h, .section-one {
   line-height: normal; }
 
 .body-color, body {
@@ -169,14 +169,12 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
     background: #818385; }
 
 .large-1-h {
-  margin: 50px auto;
-  line-height: normal; }
+  margin: 50px auto; }
 
 .section-one {
   padding: 50px 9% 0;
   height: 265px;
-  margin-bottom: 28px;
-  line-height: normal; }
+  margin-bottom: 28px; }
   .section-one img {
     position: relative;
     top: 17px; }
