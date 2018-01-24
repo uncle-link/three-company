@@ -1,0 +1,77 @@
+div, button, h1, h2, h3, h4, h5, h6, span, .btn {
+  font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif, Verdana; }
+
+.b-big-1-h {
+  font-size: 41px; }
+
+.big-1-h {
+  font-size: 36px; }
+
+.one-h {
+  font-size: 32px; }
+
+.small-1-h {
+  font-size: 30px; }
+
+.two-h, .main .second-col .second-col-title {
+  font-size: 26px; }
+
+.three-h, .main .list-title {
+  font-size: 24px; }
+
+.four-h {
+  font-size: 21px; }
+
+.small-4-h, .main .first-col .list-group-item, .main .list-body {
+  font-size: 20px; }
+
+.five-h {
+  font-size: 18px; }
+
+.six-h {
+  font-size: 16px; }
+
+.normal-f {
+  font-size: 14px; }
+
+.small-f {
+  font-size: 12px; }
+
+@media (max-width: 991px) {
+  .b-big-1-h {
+    font-size: 36px; }
+
+  .big-1-h {
+    font-size: 32px; }
+
+  .one-h {
+    font-size: 30px; }
+
+  .small-1-h {
+    font-size: 26px; }
+
+  .two-h, .main .second-col .second-col-title {
+    font-size: 24px; }
+
+  .three-h, .main .list-title {
+    font-size: 21px; }
+
+  .four-h {
+    font-size: 20px; }
+
+  .small-4-h, .main .first-col .list-group-item, .main .list-body {
+    font-size: 18px; }
+
+  .five-h {
+    font-size: 16px; }
+
+  .six-h {
+    font-size: 14px; }
+
+  .normal-f {
+    font-size: 12px; }
+
+  .small-f {
+    font-size: 10px; } }
+
+/*# sourceMappingURL=specification.font.css.map */

@@ -1,0 +1,11 @@
+@import "../common/sass/common-color";
+
+span, .btn, small, .tab-title {
+  @extend .common-color;
+}
+
+.second-sort-page {
+  .module {
+    @extend .title-color;
+  }
+}

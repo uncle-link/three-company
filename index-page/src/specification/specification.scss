@@ -1,7 +1,8 @@
 @import "../common/sass/common-function";
 @import "../common/sass/common-structure";
 
-@import "specification-font";
+@import "specification.font";
+@import "specification.color";
 /*color*/
 $mainColor: #2ea7e0;
 /*global*/
@@ -27,10 +28,6 @@ $mainColor: #2ea7e0;
 }
 
 a {
-  color: black;
-  &:hover {
-    text-decoration: none;
-  }
   &.active {
     color: $mainColor;
   }
@@ -41,7 +38,7 @@ a {
 
 .main {
   @include maxWidth();
-  .col-md-4, col-md-8 {
+  .col-md-4, .col-md-8 {
     @include paddingSmall(0);
   }
 }

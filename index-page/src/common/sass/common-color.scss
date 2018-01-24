@@ -1,0 +1,35 @@
+$bodyColor: #5a5a5a;
+$commonColor: #727171;
+$titleColor: #3F3B3A;
+$secondTitleColor: #5A5858;
+$articleColor: #595857;
+
+
+
+.body-color {
+  color: $bodyColor;
+}
+
+.common-color {
+  color: $commonColor;
+}
+
+.title-color {
+  color: $titleColor;
+}
+
+.second-title-color {
+  color: $secondTitleColor;
+}
+
+.article-color {
+  color: $articleColor;
+}
+
+body {
+  @extend .body-color;
+}
+a {
+  @extend .common-color;
+}
+

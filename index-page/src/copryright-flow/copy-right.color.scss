@@ -1,0 +1,10 @@
+@import "../common/sass/common-color";
+
+.subtitle, .brand-title, .module h4, .content-title, .shop-registry-title, .shop-registry-module, .function-title{
+  @extend .title-color;
+}
+
+.brand small, .brand .module small{
+  @extend .common-color;
+}
+

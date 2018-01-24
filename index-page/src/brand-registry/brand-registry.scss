@@ -2,6 +2,7 @@
 @import "../common/sass/common-structure";
 
 @import "brand-registry.font";
+@import "brand-registry.color";
 
 $hoverColorPercent: 20%;
 
@@ -10,6 +11,10 @@ $hoverColorPercent: 20%;
 .index-page .entry {
   @include maxWidth();
 }
+.index-page .btn{
+  padding: 13px 25px;
+}
+
 
 /*private*/
 
@@ -355,7 +360,6 @@ $hoverColorPercent: 20%;
   }
 
   .index-page .btn{
-    padding: 13px 25px;
     margin-bottom: 10px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -374,6 +378,7 @@ $hoverColorPercent: 20%;
   }
 }
 @media(max-width: 991px) {
+
   .common-problem {
     text-align: center;
   }

@@ -13,7 +13,7 @@ $smallf: 12px;
 
 
 div,button, h1, h2, h3, h4, h5, h6, span,.btn {
-  font-weight: bold;
+  font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif, Verdana;
 }
 
 .b-big-1-h {
@@ -47,9 +47,7 @@ div,button, h1, h2, h3, h4, h5, h6, span,.btn {
 }
 .six-h {
   font-size: $sixh;
-  @media(max-width: 991px) {
-    font-size: $normalf;
-  }
+
 }
 .normal-f {
   font-size: 14px;
@@ -57,4 +55,44 @@ div,button, h1, h2, h3, h4, h5, h6, span,.btn {
 .small-f {
   font-size: $smallf;
 }
+@media(max-width: 991px) {
+  .b-big-1-h {
+    font-size: $big1h;
+  }
+  .big-1-h {
+    font-size: $oneh;
+  }
+  .one-h {
+    font: {
+      size: $small1h;
+    }
+  }
+  .small-1-h {
+    font-size: $twoh;
+  }
+  .two-h {
+    font-size: $threeh;
+  }
+  .three-h {
+    font-size: $fourh;
+  }
+  .four-h {
+    font-size: $small4h;
+  }
+  .small-4-h {
+    font-size: $fiveh;
+  }
+  .five-h {
+    font-size: $sixh;
+  }
+  .six-h {
+    font-size: $normalf;
 
+  }
+  .normal-f {
+    font-size: $smallf;
+  }
+  .small-f {
+    font-size:  10px;
+  }
+}

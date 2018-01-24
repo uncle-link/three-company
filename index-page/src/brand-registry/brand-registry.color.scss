@@ -1,0 +1,19 @@
+@import "../common/sass/common-color";
+
+.subtitle, .brand-title,  .content-title, .shop-registry-title, .shop-registry-module, .function-title, .tab-list-title, .registry-risk-title, .common-problem-title, .second-list .list-group-item{
+  @extend .title-color;
+}
+
+.brand .small-4-h, .btn{
+  @extend .common-color;
+}
+
+.registry-risk-modules h6  {
+  @extend .article-color;
+}
+.first-list {
+  @extend .second-title-color;
+}
+
+
+

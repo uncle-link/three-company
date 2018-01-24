@@ -2,8 +2,13 @@
 .max-container {
   max-width: 1700px; }
 
+a:hover, .btn.btn-link:hover {
+  text-decoration: none; }
+a:active, .btn.btn-link:active {
+  text-decoration: none; }
+
 div, button, h1, h2, h3, h4, h5, h6, span, .btn {
-  font-weight: bold; }
+  font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif, Verdana; }
 
 .b-big-1-h, .content .module h4 {
   font-size: 41px; }
@@ -34,9 +39,6 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 
 .six-h, .meal .tab-content button, .meal .meal-download .btn {
   font-size: 16px; }
-  @media (max-width: 991px) {
-    .six-h, .meal .tab-content button, .meal .meal-download .btn {
-      font-size: 14px; } }
 
 .normal-f, .meal .tab-list-title + p small {
   font-size: 14px; }
@@ -44,12 +46,66 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 .small-f, .function small {
   font-size: 12px; }
 
+@media (max-width: 991px) {
+  .b-big-1-h, .content .module h4 {
+    font-size: 36px; }
+
+  .big-1-h {
+    font-size: 32px; }
+
+  .one-h {
+    font-size: 30px; }
+
+  .small-1-h, .function h5 {
+    font-size: 26px; }
+
+  .two-h, .brand .module small {
+    font-size: 24px; }
+
+  .three-h, .shop-registry .shop-registry-module h5, .registry-risk .registry-risk-module-title {
+    font-size: 21px; }
+
+  .four-h, .content .module small, .meal .tab-list-title {
+    font-size: 20px; }
+
+  .small-4-h, .registry-risk .registry-risk-module-title + h6, .common-problem .second-list .list-group-item, .common-problem .third-list .list-group-item {
+    font-size: 18px; }
+
+  .five-h, .meal-button-group .btn, .shop-registry .shop-registry-module small, .shop-registry .shop-registry-hint, .common-problem .first-list li {
+    font-size: 16px; }
+
+  .six-h, .meal .tab-content button, .meal .meal-download .btn {
+    font-size: 14px; }
+
+  .normal-f, .meal .tab-list-title + p small {
+    font-size: 12px; }
+
+  .small-f, .function small {
+    font-size: 10px; } }
+.body-color, body {
+  color: #5a5a5a; }
+
+.common-color, a, .brand .small-4-h, .brand .registry-risk .registry-risk-module-title + h6, .registry-risk .brand .registry-risk-module-title + h6, .brand .common-problem .second-list .list-group-item, .common-problem .second-list .brand .list-group-item, .brand .common-problem .third-list .list-group-item, .common-problem .third-list .brand .list-group-item, .btn {
+  color: #727171; }
+
+.title-color, .subtitle, .brand-title, .content-title, .shop-registry-title, .shop-registry-module, .function-title, .tab-list-title, .registry-risk-title, .common-problem-title, .second-list .list-group-item {
+  color: #3F3B3A; }
+
+.second-title-color, .first-list {
+  color: #5A5858; }
+
+.article-color, .registry-risk-modules h6 {
+  color: #595857; }
+
 /*global*/
 .index-page .entry {
   display: block;
   margin: 0 auto;
   max-width: 1700px;
   width: 95%; }
+
+.index-page .btn {
+  padding: 13px 25px; }
 
 /*private*/
 .subtitle {
@@ -337,7 +393,6 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
     width: 97.333333%; }
 
   .index-page .btn {
-    padding: 13px 25px;
     margin-bottom: 10px;
     text-overflow: ellipsis;
     overflow: hidden; }

@@ -1,0 +1,5 @@
+@import "../common/sass/common-color";
+
+.first-col {
+  @extend .title-color;
+}

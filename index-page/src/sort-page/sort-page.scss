@@ -1,14 +1,14 @@
 @import "../common/sass/common-function";
 @import "../common/sass/common-structure";
 
-@import "sort-page-font.css";
+@import "sort-page.font";
+@import "sort-page.color";
 
 /*color*/
 $mainColor: #2ea7e0;
 
 /*global*/
 a {
-  color: black;
   &:hover {
     text-decoration: none;
   }
@@ -193,7 +193,12 @@ a {
 
   .download-btn {
     padding: 0 0 20px 50px;
-
+    .btn.btn-link {
+      &:hover {
+        background: darkgray;
+        color: white;
+      }
+    }
   }
 }
 

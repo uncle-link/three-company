@@ -1,3 +1,11 @@
 .max-container {
   max-width: 1700px;
 }
+a, .btn.btn-link{
+  &:hover {
+    text-decoration: none;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}

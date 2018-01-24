@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAOA,iBAAY;EACV,KAAK,EARK,OAAO;;AAWnB,gBAAc;EACZ,KAAK,EAXO,OAAO;;AAcrB,wBAAa;EACX,KAAK,EAdM,OAAO;;AAiBpB,cAAe;EACb,KAAK,EAjBQ,OAAO",
+"sources": ["../common/sass/common-color.scss"],
+"names": [],
+"file": "specification.color.css"
+}

@@ -1,18 +1,110 @@
 /*mixin*/
-@import url(sort-page-font.css);
 .max-container {
   max-width: 1700px; }
 
+a:hover, .btn.btn-link:hover {
+  text-decoration: none; }
+a:active, .btn.btn-link:active {
+  text-decoration: none; }
+
+div, button, h1, h2, h3, h4, h5, h6, span, .btn {
+  font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif, Verdana; }
+
+.b-big-1-h {
+  font-size: 41px; }
+
+.big-1-h, .first-sort-page .first-col h5 {
+  font-size: 36px; }
+
+.one-h {
+  font-size: 32px; }
+
+.small-1-h {
+  font-size: 30px; }
+
+.two-h {
+  font-size: 26px; }
+
+.three-h {
+  font-size: 24px; }
+
+.four-h, .first-sort-page .second-col strong {
+  font-size: 21px; }
+
+.small-4-h {
+  font-size: 20px; }
+
+.five-h, .tab-button-group a, .first-sort-page .first-col .btn, .third-col-footer, .second-sort-page .module h5, .second-sort-page .module p, .second-sort-page .module .btn {
+  font-size: 18px; }
+
+.six-h, .first-sort-page .second-col .btn, .third-col-title, .third-col-body {
+  font-size: 16px; }
+
+.normal-f, .first-sort-page .second-col small {
+  font-size: 14px; }
+
+.small-f {
+  font-size: 12px; }
+
+@media (max-width: 991px) {
+  .b-big-1-h {
+    font-size: 36px; }
+
+  .big-1-h, .first-sort-page .first-col h5 {
+    font-size: 32px; }
+
+  .one-h {
+    font-size: 30px; }
+
+  .small-1-h {
+    font-size: 26px; }
+
+  .two-h {
+    font-size: 24px; }
+
+  .three-h {
+    font-size: 21px; }
+
+  .four-h, .first-sort-page .second-col strong {
+    font-size: 20px; }
+
+  .small-4-h {
+    font-size: 18px; }
+
+  .five-h, .tab-button-group a, .first-sort-page .first-col .btn, .third-col-footer, .second-sort-page .module h5, .second-sort-page .module p, .second-sort-page .module .btn {
+    font-size: 16px; }
+
+  .six-h, .first-sort-page .second-col .btn, .third-col-title, .third-col-body {
+    font-size: 14px; }
+
+  .normal-f, .first-sort-page .second-col small {
+    font-size: 12px; }
+
+  .small-f {
+    font-size: 10px; } }
+.body-color, body {
+  color: #5a5a5a; }
+
+.common-color, a, span, .btn, small, .tab-title {
+  color: #727171; }
+
+.title-color, .second-sort-page .module {
+  color: #3F3B3A; }
+
+.second-title-color {
+  color: #5A5858; }
+
+.article-color {
+  color: #595857; }
+
 /*color*/
 /*global*/
-a {
-  color: black; }
-  a:hover {
-    text-decoration: none; }
-  a.active {
-    color: #2ea7e0; }
-  a.active .btn {
-    color: #2ea7e0; }
+a:hover {
+  text-decoration: none; }
+a.active {
+  color: #2ea7e0; }
+a.active .btn {
+  color: #2ea7e0; }
 
 .sort-page .btn {
   width: 192px;
@@ -145,6 +237,9 @@ a {
       background: white; }
 .second-sort-page .download-btn {
   padding: 0 0 20px 50px; }
+  .second-sort-page .download-btn .btn.btn-link:hover {
+    background: darkgray;
+    color: white; }
 
 @media (min-width: 992px) {
   .col-md-2 {
