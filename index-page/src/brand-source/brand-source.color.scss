@@ -1,7 +1,13 @@
 @import "../common/sass/common-color";
 
-$red: #f00;
+$red: #D52232;
+$gray: #F6F6F6;
+
 $headlineBackColor: #818385;
+
+body {
+  background: $gray;
+}
 
 .section-one {
   background: $red;

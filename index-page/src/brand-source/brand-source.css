@@ -159,8 +159,11 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 .black-color {
   color: #000; }
 
+body {
+  background: #F6F6F6; }
+
 .section-one {
-  background: #f00; }
+  background: #D52232; }
 
 .section-three {
   background: url("../assets/imgs/brand-source/back.png") no-repeat;
@@ -172,12 +175,17 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
   margin: 50px auto; }
 
 .section-one {
+  position: relative;
   padding: 50px 9% 0;
   height: 265px;
   margin-bottom: 28px; }
-  .section-one img {
-    position: relative;
-    top: 17px; }
+  .section-one .head-img {
+    position: absolute;
+    bottom: -1px;
+    right: 10%; }
+    @media (max-width: 415px) {
+      .section-one .head-img {
+        width: 120px; } }
 
 .section-two {
   margin-top: 28px; }
@@ -187,6 +195,12 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
     margin: 0 auto;
     position: relative;
     top: 18px; }
+    @media (min-width: 1200px) {
+      .section-two .img-responsive {
+        top: 80px; } }
+    @media (min-width: 991px) and (max-width: 1199px) {
+      .section-two .img-responsive {
+        top: 180px; } }
 
 .section-three {
   padding: 10% 9% 100px; }
@@ -198,6 +212,12 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
     .section-three .headline div {
       display: table-cell;
       vertical-align: middle; }
+  @media (max-width: 415px) {
+    .section-three {
+      padding-bottom: 50px; }
+      .section-three .headline {
+        margin: 0 auto 8px;
+        height: auto; } }
 
 .package {
   margin-top: 40px; }

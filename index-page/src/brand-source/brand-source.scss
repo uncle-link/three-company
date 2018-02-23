@@ -10,12 +10,17 @@
 }
 
 .section-one {
+  position: relative;
   padding: 50px 9% 0;
   height: 265px;
   margin-bottom: 28px;
-  img {
-    position: relative;
-    top: 17px;
+  .head-img {
+    position: absolute;
+    bottom: -1px;
+    right: 10%;
+    @media (max-width: 415px) {
+      width: 120px;
+    }
   }
 }
 
@@ -29,6 +34,12 @@
     margin: 0 auto;
     position: relative;
     top: 18px;
+    @media (min-width: 1200px) {
+      top: 80px;
+    }
+    @media (min-width: 991px) and (max-width: 1199px){
+      top: 180px;
+    }
   }
 }
 
@@ -42,6 +53,13 @@
     div {
       @include verticalCell;
     }
+  }
+  @media (max-width: 415px) {
+     .headline {
+      margin: 0 auto 8px;
+      height: auto;
+    }
+    padding-bottom: 50px;
   }
 }
 
