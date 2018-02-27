@@ -19,7 +19,8 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
   font-size: 44px; }
 
 .b-big-1-h, .content .module h4 {
-  font-size: 41px; }
+  font-size: 41px;
+  font-weight: 600; }
 
 .big-1-h {
   font-size: 36px; }
@@ -28,10 +29,12 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
   font-size: 32px; }
 
 .small-1-h, .function h5 {
-  font-size: 30px; }
+  font-size: 30px;
+  font-weight: 600; }
 
 .two-h, .brand .module small {
-  font-size: 26px; }
+  font-size: 26px;
+  font-weight: 600; }
 
 .three-h, .shop-registry .shop-registry-module h5, .registry-risk .registry-risk-module-title {
   font-size: 24px; }
@@ -470,5 +473,23 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
 @media (max-width: 1200px) and (min-width: 992px) {
   .registry-risk-modules div.col-md-4 {
     height: 500px; } }
+@media (max-width: 768px) {
+  .shop-registry-modules .shop-registry-module {
+    height: 187px; } }
+@media (max-width: 566px) {
+  .brand .module {
+    height: 120px; }
+
+  .content .module {
+    height: 250px; }
+
+  .shop-registry .shop-registry-hint {
+    padding: 0 20px; }
+
+  .registry-risk-modules .col-md-4 {
+    height: auto; }
+
+  .list-group-item .right-gt {
+    display: none; } }
 
 /*# sourceMappingURL=brand-registry.css.map */

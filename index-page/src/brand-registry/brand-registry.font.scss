@@ -2,6 +2,7 @@
 .brand .module small {
   @extend .two-h;
 }
+
 .content {
   .module {
     h4 {
@@ -12,6 +13,7 @@
     }
   }
 }
+
 .meal-button-group {
   .btn {
     @extend .five-h;

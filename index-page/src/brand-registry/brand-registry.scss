@@ -4,6 +4,7 @@
 @import "brand-registry.font";
 @import "brand-registry.color";
 
+
 $hoverColorPercent: 20%;
 /*global*/
 .index-page .entry {
@@ -392,5 +393,29 @@ $hoverColorPercent: 20%;
 @media (max-width: 1200px) and (min-width: 992px) {
   .registry-risk-modules div.col-md-4 {
     height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-registry-modules .shop-registry-module {
+    height: 187px;
+  }
+}
+
+@media (max-width: 566px) {
+  .brand .module {
+    height: 120px;
+  }
+  .content .module {
+    height: 250px;
+  }
+  .shop-registry .shop-registry-hint {
+    padding: 0 20px;
+  }
+  .registry-risk-modules .col-md-4 {
+    height: auto;
+  }
+  .list-group-item .right-gt {
+    display: none;
   }
 }

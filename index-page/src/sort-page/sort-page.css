@@ -19,7 +19,8 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
   font-size: 44px; }
 
 .b-big-1-h {
-  font-size: 41px; }
+  font-size: 41px;
+  font-weight: 600; }
 
 .big-1-h, .first-sort-page .first-col h5 {
   font-size: 36px; }
@@ -28,10 +29,12 @@ div, button, h1, h2, h3, h4, h5, h6, span, .btn {
   font-size: 32px; }
 
 .small-1-h {
-  font-size: 30px; }
+  font-size: 30px;
+  font-weight: 600; }
 
 .two-h {
-  font-size: 26px; }
+  font-size: 26px;
+  font-weight: 600; }
 
 .three-h {
   font-size: 24px; }

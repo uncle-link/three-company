@@ -14,11 +14,14 @@ $normalf: 14px;
 $smallf: 12px;
 
 
+$thick: 600;
+
 div,button, h1, h2, h3, h4, h5, h6, span,.btn {
   font-family: Arial, "Microsoft YaHei", Helvetica, sans-serif, Verdana;
 }
 
 .large-1-h {
+
   font: {
     size: $large1h;
   }
@@ -26,6 +29,8 @@ div,button, h1, h2, h3, h4, h5, h6, span,.btn {
 
 .b-big-1-h {
   font-size: $bbig1h;
+  font-weight: $thick;
+;
 }
 .big-1-h {
   font-size: $big1h;
@@ -37,9 +42,11 @@ div,button, h1, h2, h3, h4, h5, h6, span,.btn {
 }
 .small-1-h {
   font-size: $small1h;
+  font-weight: $thick;
 }
 .two-h {
   font-size: $twoh;
+  font-weight: $thick;
 }
 .three-h {
   font-size: $threeh;
